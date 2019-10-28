@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { TOGGLE_ACCOUNT_MENU } from './header.actions.constants';\n/*\n * action creators\n */\n// user authentication action\n\nexport function accountMenuToggle(toggleMenu) {\n  return {\n    type: TOGGLE_ACCOUNT_MENU,\n    payload: {\n      toggleMenu\n    }\n  };\n}\nexport default {\n  accountMenuToggle\n};","map":null,"metadata":{},"sourceType":"module"}
