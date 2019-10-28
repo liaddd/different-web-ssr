@@ -1,0 +1,83 @@
+/*   Contact Section */
+@import "../../pages/styles/main.scss";
+
+.contact {
+  section {
+    padding: $length56px $length16px 0;
+    &.section-subscribe-form {
+      padding-bottom: $length65px;
+    }
+  }
+  .section-small-heading,
+  .section-smaller-heading,
+  .section-contact {
+    text-align: center;
+  }
+  .section-heading-line {
+    &:after {
+      bottom: -17px;
+      width: 50px;
+    }
+  }
+  .section-smaller-heading {
+    margin-bottom: $length8px;
+    @include media(media-small-min) {
+      margin-bottom: $length32px;
+    }
+  }
+}
+
+.contact-block-container {
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  @include media(media-small-min) {
+    margin-top: $length90px; //90px
+    margin-bottom: 2.26493vw; //33px
+  }
+}
+
+.contact-block {
+  flex-basis: 100%;
+  max-width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-right: none;
+  min-height: $length120px;
+  font-size: $font16;
+  &:first-of-type {
+    border-right: none;
+  }
+  img {
+    height: 30px;
+    width: 30px;
+  }
+  h3 {
+    color: $red;
+    font-size: inherit;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0 auto;
+    a {
+      color: $text-color;
+    }
+    address {
+      font-style: normal;
+    }
+  }
+  @include media(media-small-min) {
+    flex-basis: calc(33% - 1rem);
+    max-width: calc(33% - 1rem);
+    padding: 5px $length16px 0;
+    border-right: 1px solid $red;
+    font-size: $font21;
+  }
+}
+
+/*   End Contact Section */

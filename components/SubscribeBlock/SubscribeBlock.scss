@@ -1,0 +1,41 @@
+@import "../../pages/styles/main.scss";
+
+.section-contact-form {
+  + div {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+.subscribe-block-form {
+  .btn-block {
+    text-align: center;
+    margin-top: 2.88264vw; //44px
+  }
+}
+.subscribe-form-container {
+  margin-top: 5.628vw; //82px
+  margin-bottom: $length24px; //23px
+  .input-block {
+    flex-basis: 100%;
+    max-width: 100%;
+    @include media(media-small-min) {
+      width: calc(50% - #{$length20px});
+      flex-basis: calc(50% - #{$length20px});
+    }
+  }
+  .input-label {
+    @include media(media-small-min) {
+      max-width: 385px;
+    }
+  }
+}
+.subscribe-block-checkbox {
+  text-align: center;
+  font-size: $font18;
+  .subscribe-input-checkbox {
+    margin-left: 1.85312vw;
+  }
+}

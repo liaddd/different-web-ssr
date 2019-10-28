@@ -1,0 +1,19 @@
+@import "../../pages/styles/main.scss";
+
+.section-location {
+  text-align: center;
+}
+
+.location-block {
+  position: relative;
+  margin: 0 auto; //46px
+  height: 477px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: $map-block-shadow;
+  background-color: $white-grey;
+  @include media(media-small-min) {
+    width: calc(100% - 4rem);
+    margin: 3.15717vw auto 0; //46px
+  }
+}

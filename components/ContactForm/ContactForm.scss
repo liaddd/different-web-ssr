@@ -1,0 +1,27 @@
+@import "../../pages/styles/main.scss";
+
+.section-contact-form {
+  @include media(media-small-min) {
+    margin-bottom: 8px;
+  }
+}
+.contact-block-form {
+  max-width: 832px;
+  margin: auto;
+  .textarea {
+    min-height: $length160px;
+  }
+  .btn-block {
+    text-align: center;
+    margin-top: 3vw; //44px
+    .input-submit {
+      padding-right: $length35px;
+      padding-left: $length35px;
+    }
+  }
+  .input-block {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

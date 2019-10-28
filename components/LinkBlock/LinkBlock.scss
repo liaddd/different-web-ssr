@@ -1,0 +1,53 @@
+@import "../../pages/styles/main.scss";
+/*   Header Links Section */
+.section-header-links {
+  text-align: center;
+  padding: 0 $length16px;
+  background-color: $border-color;
+
+  .container {
+    z-index: 2;
+  }
+}
+
+.header-link-block {
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-link {
+  width: 100%;
+  padding: 10px;
+  max-width: 325px;
+  flex-basis: 100%;
+  @include media(media-small-min) {
+    flex-basis: 50%;
+    padding: $font14;
+  }
+  img {
+    display: inline-block;
+  }
+  &:first-of-type {
+    img {
+      filter: grayscale(1);
+      width: 119px;
+      height: auto;
+      @include media(media-small-min) {
+        margin-left: 2.74537vw; //40px
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    img {
+      width: 228px;
+      height: 49px;
+      filter: grayscale(1);
+    }
+  }
+}
+
+/*   End Header Links Section */

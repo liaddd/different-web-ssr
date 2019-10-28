@@ -1,0 +1,302 @@
+@import "../styles/main.scss";
+
+.card-page {
+  background-image: none;
+  @include media(media-small-min) {
+    background-image: url(/img/bg-image.png);
+    padding: 101px 1rem 148px;
+  }
+}
+.arrow-right-link {
+  top: 44px;
+  right: 1rem;
+  font-family: Rubik;
+  font-size: $font16;
+  font-weight: bold;
+  color: $text-color;
+  position: absolute;
+  display: inline-block;
+  @include media(media-small-min) {
+    top: -44px;
+    right: 0;
+  }
+  &:before {
+    display: inline-block;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    background: url(/img/arrow-right-icon.svg) center no-repeat;
+    margin-left: $length16px;
+    vertical-align: middle;
+    transition: none;
+  }
+  &:hover {
+    color: $blue;
+    &:before {
+      background: url(/img/arrow-right-icon-blue.svg) center no-repeat;
+    }
+  }
+}
+.card-page-block {
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  @include media(media-small-min) {
+    border-radius: 100px 0;
+    box-shadow: $block-shadow;
+    background-color: $white;
+  }
+}
+.card-block {
+  flex-basis: 100%;
+  width: 100%;
+  padding: $length20px 0;
+  @include media(media-small-min) {
+    padding: 63px 0 80px;
+    flex-basis: 59.57447%;
+    width: 59.57447%;
+  }
+}
+.card-header {
+  text-align: center;
+  color: $title-color;
+}
+.card-header-title {
+  font-size: $font24;
+  margin-bottom: 0;
+  font-family: "Rubik";
+  @include media(media-large-min) {
+    font-size: $font32;
+  }
+}
+.card-block-form {
+  height: 100%;
+  .btn-block {
+    text-align: center;
+    margin-top: 42px; //44px
+  }
+}
+.card-form {
+  margin: 0 auto;
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  height: 100%;
+  padding: 0 1rem;
+
+  .btn-grey {
+    box-shadow: none;
+    background-color: $btn-grey;
+    margin-bottom: 0;
+  }
+}
+.card-form-container {
+  max-width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  @include media(media-small-min) {
+    margin-bottom: 34px;
+    margin-top: 44px;
+  }
+  @include media(media-xx-small-min) {
+    max-width: 300px;
+  }
+  .input-block {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .input-block-row {
+    width: calc(50% - 7px);
+    flex-basis: calc(50% - 7px);
+    @include media(media-small-min) {
+      width: calc(50% - 33px);
+      flex-basis: calc(50% - 33px);
+    }
+  }
+  .input-label {
+    input {
+      &:hover,
+      &:focus {
+        + .chevron-down-icon:after {
+          background: url(/img/chevron-down-icon-blue.svg) center no-repeat;
+        }
+      }
+    }
+  }
+}
+.card-block-checkbox {
+  font-size: $font16;
+  color: $title-color;
+  .card-checkbox {
+    margin-left: 11px;
+  }
+  a {
+    color: $red;
+  }
+}
+.card-form {
+  input[type="submit"] {
+    min-width: 240px;
+    font-weight: bold;
+  }
+}
+.chevron-down-icon {
+  position: relative;
+  &:after {
+    display: inline-block;
+    margin-right: 4px;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: url(/img/chevron-down-icon-color.svg) center no-repeat;
+    vertical-align: middle;
+  }
+}
+.cvv-key-block {
+  position: relative;
+}
+.cvv-virtual-keyboard {
+  padding: 10px;
+  left: 0;
+  top: 100%;
+  margin: auto;
+  z-index: 1;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  background-color: $white;
+  position: absolute;
+  box-shadow: $drop-menu-shadow;
+  min-width: inherit;
+  max-width: 117px;
+  border-radius: 0 0 21.5px 21.5px;
+  overflow: hidden;
+}
+.cvv-key {
+  float: right;
+  width: 28px;
+  height: 28px;
+  margin: 2px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  color: $title-color;
+  cursor: pointer;
+  background-color: $white;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  &:hover {
+    background-color: $input-background-hover;
+  }
+  &:focus {
+    border-color: $blue;
+    color: $blue;
+  }
+  &.btn-bold:focus {
+    border-color: $blue;
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+/* Card Menu */
+.card-menu-block {
+  display: none;
+}
+@include media(767px) {
+  .card-menu-block {
+    display: flex;
+    position: relative;
+    flex-basis: 100%;
+    width: 100%;
+    padding: 40px 29px 22px;
+    &:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      left: 0;
+      bottom: -2px;
+      margin: 0 auto;
+      width: 360px;
+      height: 2px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        #bbbbbb 15%,
+        #bbbbbb 85%,
+        rgba(255, 255, 255, 0)
+      );
+    }
+  }
+  .card-menu {
+    position: relative;
+    display: inline-flex;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 122px;
+    margin: 0 auto;
+    z-index: 2;
+    &:before {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      content: "";
+      max-width: 300px;
+      width: 100%;
+      height: 1px;
+      margin: auto;
+      background-color: $grey-light;
+      z-index: 1;
+    }
+  }
+  .card-menu-label {
+    position: relative;
+    background-color: $white;
+    z-index: 4;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid $red;
+    box-shadow: $icon-shadow-white;
+    padding: 4px;
+    background-position: center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &:first-of-type {
+      background-image: url(/img/summary-icon-color.svg);
+    }
+    &:nth-of-type(2) {
+      background-image: url(/img/credit-card-icon-color.svg);
+    }
+  }
+  .card-menu-input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+    &:checked + label {
+      background-color: $red;
+      cursor: default;
+      &:first-of-type {
+        background-image: url(/img/summary-icon-white.svg);
+      }
+      &:nth-of-type(2) {
+        background-image: url(/img/credit-card-icon-white.svg);
+      }
+    }
+  }
+}

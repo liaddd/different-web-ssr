@@ -1,0 +1,147 @@
+@import "../../pages/styles/main.scss";
+
+.section-footer {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 100%;
+  padding-top: 4.25532vw; //66px
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $text-color;
+  color: $white;
+  font-family: "Rubik";
+  padding-bottom: 4.25532vw;
+  @include media(media-small-min) {
+    padding-bottom: 0;
+  }
+  @include media(media-xx-large-min) {
+    justify-content: flex-start;
+  }
+}
+.footer-block {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 2 2 auto;
+  max-width: 150px;
+  @include media(media-large-min) {
+    max-width: 160px;
+  }
+  @include media(media-xx-large-min) {
+    max-width: calc(50% - 0.5 * #{$media-medium});
+  }
+}
+.footer-container {
+  border-right: 1px solid $footer-color;
+  flex: 1 1 auto;
+  margin-right: 0;
+  margin-left: 0;
+  max-width: calc(100% - 150px);
+  @include media(media-large-min) {
+    max-width: calc(#{$media-medium} - 160px);
+  }
+  @include media(media-xx-large-min) {
+    max-width: $media-medium;
+  }
+}
+.section-footer {
+  .links-block {
+    padding-top: $length30px;
+    display: inline-flex;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-bottom: calc(#{$length30px} - 12px);
+    padding-right: 0;
+    @include media(media-small-min) {
+      padding-bottom: 0;
+    }
+    @include media(media-xx-large-min) {
+      padding-right: $length80px;
+    }
+  }
+  .links-block-row {
+    padding-top: 2.375rem; //38px
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 10rem;
+    height: inherit;
+    margin-right: 0;
+    padding-right: 22.5px;
+    width: 100%;
+    @include media(media-small-min) {
+      width: 100%;
+      //height: 150px;
+      margin-right: $length80px;
+    }
+    /* &:nth-child(2) {
+        max-width: 10rem;
+        flex-basis: auto;
+        @include media(media-small-min) {
+          max-width: 20rem;
+          flex-basis: 50%;
+        }
+      } */
+    a {
+      font-size: $font16;
+      color: $white;
+      display: inline-flex;
+      margin: 0 0 12px;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  .links-block-title {
+    font-size: $font18;
+    color: $grey-light;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    line-height: 120%;
+  }
+  .logo-link {
+    display: inline-block;
+  }
+
+  .logo-grey {
+    width: 98px;
+    height: 98px;
+  }
+  .icon-dims {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background-color: $footer-color;
+    border: none;
+    border-radius: 100%;
+    position: relative;
+    margin: 6px 12px;
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+
+/*   Why Block */
+
+.help-block {
+  padding-top: $length30px;
+  padding-bottom: $length30px;
+}
+.help-link {
+  font-family: Rubik;
+  font-size: $font16;
+  height: 95px;
+  width: 95px;
+}
+
+/*   End Help Block */

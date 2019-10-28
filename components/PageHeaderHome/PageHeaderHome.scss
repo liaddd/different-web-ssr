@@ -1,0 +1,120 @@
+/*   Page Header Home Section */
+@import "../../pages/styles/main.scss";
+
+.margin-top-container {
+  margin: -10px auto;
+  @include media(media-small-min) {
+    margin: 130px 0 auto;
+  }
+}
+.page-header-home-section {
+  min-height: 100vh; //52.57378vw
+  text-align: center;
+  color: $white;
+  @include media(media-small-min) {
+    min-height: calc(100vh - 91.7px);
+  }
+  .btn {
+    border-radius: 18px;
+    font-size: 0.875rem;
+    padding: 7.5px 5px;
+    min-width: 146px;
+    @include media(media-small-min) {
+      border-radius: 28.5px;
+      font-size: 1.25rem;
+      padding: 14.5px 5px;
+      min-width: 192px;
+    }
+  }
+}
+
+.page-header-home-block {
+  margin-bottom: 0;
+  margin-top: 22.58567vh; //145px;
+  .btn-flex-btn {
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    .btn-grey-link {
+      margin-top: 10px;
+      color: #007aff;
+      font-size: 17px;
+      border: solid 1px #007aff;
+    }
+  }
+  @include media(media-xx-small-min) {
+    margin-top: 130px;
+    margin-bottom: 6.451613vw; //94px
+  }
+}
+
+.page-header-home-title {
+  font-size: $font32;
+  font-weight: bold;
+  line-height: 130%;
+  @include media(media-small-min) {
+    font-size: $font50;
+  }
+}
+.page-header-home-subtitle-block {
+  margin-bottom: 4.11805vw; //60px
+  margin-top: 3.225806vw; //47px
+  display: inline-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  font-size: $font22;
+  @include media(media-xx-small-min) {
+    font-size: $font24;
+  }
+  @include media(media-small-min) {
+    font-size: $font35;
+  }
+}
+.page-header-home-subtitle {
+  border-right: 1px solid $white;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.5rem;
+  flex-basis: 33%;
+  @include media(media-xx-small-min) {
+    padding-bottom: 1rem;
+    outline: none;
+  }
+  &:first-of-type {
+    border-right: none;
+  }
+}
+
+.page-header-home-img {
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: url(/img/home-banner-small.png);
+  @include media(ratio2x) {
+    background-image: url(/img/home-banner-small@2x.png);
+  }
+  @include media(ratio3x) {
+    background-image: url(/img/home-banner-small@3x.png);
+  }
+  @include media(media-xx-small-min) {
+    background-color: $border-color;
+    background-size: cover;
+    background-position: center bottom;
+    background-image: url(/img/home-banner.png);
+    align-items: center;
+    @include media(ratio2x) {
+      background-image: url(/img/home-banner@2x.png);
+    }
+    @include media(ratio3x) {
+      background-image: url(/img/home-banner@3x.png);
+    }
+  }
+}
+
+/*   End Page Header Home Section */

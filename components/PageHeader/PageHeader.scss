@@ -1,0 +1,43 @@
+/*   Page Header Section */
+@import "../../pages/styles/main.scss";
+
+.page-header-section {
+  min-height: 29.37543vw; //428px
+  text-align: center;
+  color: $white;
+}
+
+.page-header-block {
+  margin-bottom: $length25px;
+  .contact & {
+    margin-bottom: $length45px;
+  }
+}
+
+.page-header-title {
+  font-size: $font32;
+  font-weight: bold;
+  @include media(media-small-min) {
+    font-size: $font60;
+  }
+}
+
+.page-header-img {
+  background-image: url(/img/banner.png);
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 100%;
+  justify-content: center;
+  align-items: center;
+  @include media(ratio2x) {
+    background-image: url(/img/banner@2x.png);
+  }
+  @include media(ratio3x) {
+    background-image: url(/img/banner@3x.png);
+  }
+}
+
+/*   End Page Header Section */

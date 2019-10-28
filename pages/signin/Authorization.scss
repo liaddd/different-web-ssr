@@ -1,0 +1,225 @@
+@import "../styles/main.scss";
+
+.signin {
+  height: 100%;
+}
+.authorization-page {
+  height: 100%;
+  display: inline-flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-size: 100% auto;
+  padding-top: 70px;
+  background-color: $red-42;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-image: url(/img/bg-image.png);
+  @include media(ratio2x) {
+    background-image: url(/img/bg-image@2x.png);
+  }
+  @include media(ratio3x) {
+    background-image: url(/img/bg-image@3x.png);
+  }
+  @include media(media-small-min) {
+    background: linear-gradient(66deg, $red-light-42, $red-42);
+    align-items: center;
+    padding-top: 0;
+  }
+}
+.authorization-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  .logo {
+    display: inline-block;
+    height: 69px;
+    width: 69px;
+    margin-right: $length65px; //65px
+    margin-top: $length44px; //44px
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/img/different_logo_white.png);
+    background-size: contain;
+  }
+}
+.authorization-container {
+  width: 100%;
+  background-color: $white;
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  margin: $length16px;
+  position: relative;
+  box-shadow: $price-block-shadow;
+  min-height: inherit;
+  max-width: 300px;
+  border-radius: 70px 5px;
+  @include media(media-small-min) {
+    padding: 1.5625rem 1rem 1.5625rem;
+    max-width: 1240px;
+    min-height: 626px;
+    box-shadow: $authorization-block-shadow;
+    border-radius: 14px;
+  }
+}
+.authorization-block-img {
+  @include media(media-small-min) {
+    border-radius: 0 14px 14px 0;
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: calc(50% + 140px);
+    right: 0;
+    z-index: 2;
+    background-image: url(/img/sign-in.png);
+    background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include media(ratio2x) {
+      background-image: url(/img/sign-in@2x.png);
+    }
+    @include media(ratio3x) {
+      background-image: url(/img/sign-in@3x.png);
+    }
+  }
+}
+.authorization-close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 24px;
+  height: 24px;
+  background: url(/img/close-icon-white.svg) center no-repeat;
+  transition: none;
+  &:hover {
+    background: url(/img/close-icon-blue.svg) center no-repeat;
+  }
+
+  @include media(media-small) {
+    background: url(/img/close-icon.svg) center no-repeat;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    transform: scale(0.8);
+  }
+}
+.authorization-block {
+  flex-basis: 100%;
+  padding: 1.5625rem $length16px;
+  z-index: 3;
+  @include media(media-small-min) {
+    padding: $length16px;
+    flex-basis: 50%;
+  }
+}
+.authorization-block-form {
+  text-align: center;
+
+  .authorization-block-input {
+    margin-bottom: $length16px;
+    position: relative;
+
+    .authorization-input {
+      color: $title-color;
+      background-color: $white;
+      border: 1px solid transparent;
+      border-bottom-color: $grey-light;
+      margin-bottom: 35px; //35px
+      font-size: $font16;
+      padding: $length8px 5px;
+
+      &.error {
+        border-color: transparent;
+        border-bottom-color: $red;
+      }
+
+      &:focus {
+        border-color: transparent;
+        border-bottom-color: $blue;
+      }
+
+      @include media(media-small-min) {
+        font-size: $font32;
+      }
+    }
+
+    .authorization-input-tel {
+      width: 100%;
+      max-width: 345px;
+      text-align: center;
+    }
+    .authorization-input-number {
+      width: 100%;
+      max-width: 40px;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      text-align: center;
+      @include media(media-small-min) {
+        max-width: 65px; //65px
+      }
+    }
+    .authorization-input-error {
+      font-size: $font14;
+      color: $red-error;
+      min-height: inherit;
+      margin-bottom: 5px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      &:nth-of-type(2) {
+        bottom: -20px;
+        margin-bottom: 0;
+      }
+      @include media(media-small-min) {
+        font-size: $font21;
+        margin-bottom: 10px;
+        bottom: -7px;
+        min-height: 24px;
+      }
+    }
+  }
+}
+.authorization-block-title {
+  font-size: $font24;
+  font-weight: bold;
+  margin-bottom: $length30px; //30px
+  @include media(media-small-min) {
+    font-size: $font34;
+  }
+}
+.authorization-block-description {
+  color: $grey-light;
+  font-size: $font18;
+  margin-bottom: $length40px; //40px
+  @include media(media-small-min) {
+    font-size: $font21;
+  }
+}
+.authorization-block-info {
+  font-size: $font18;
+  margin-bottom: $length35px; //35px
+  @include media(media-small-min) {
+    font-size: $font21;
+  }
+}
+.authorization-block-checkbox {
+  margin-bottom: $length50px; //50px
+  vertical-align: middle;
+  label {
+    color: $title-color;
+    font-size: $font16;
+    a {
+      color: $red;
+    }
+  }
+}

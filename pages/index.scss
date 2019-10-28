@@ -1,0 +1,208 @@
+/*   Responsive */
+/* Colors */
+$transparent: rgba(255, 255, 255, 0);
+$white: #fff;
+$white-light: #f5f5f5;
+$grey-light: #bfbfbf;
+$black: #000; //1
+$dark: #1d1d26;
+$dark2: rgba(0, 0, 0, 0.87); //1
+$green: #36a74d;
+$blue: #007aff;
+$red: #ff776f;
+$red-light: #ffaba8;
+$red-light-42: rgba(255, 176, 168, 0.42); //1
+$red-42: rgba(255, 119, 112, 0.42); //1
+$red-75: rgba(255, 119, 112, 0.75); //1
+$red-error: #f45b41;
+$red-error2: #e53935;
+$border-color: #eee;
+$border-color-input: #979797;
+$text-color: #565350;
+$text-color-light: #a4a4a4; //1
+$title-color: #282828;
+
+$grey: rgba(169, 169, 169, 1); //1
+$white-grey: rgba(169, 169, 169, 0.5); //1
+$title-color-light: rgba(86, 83, 80, 0.5);
+$btn-grey: rgba(0, 0, 0, 0.12);
+$btn-grey-color: rgba(40, 40, 40, 0.26);
+$input-background-hover: rgba(34, 50, 84, 0.03);
+$input-checkbox-color: rgba(1, 1, 1, 0.55);
+$input-light-grey: rgba(191, 191, 191, 0.36);
+$input-placeholder-light-grey: rgba(0, 0, 0, 0.38);
+$loader-border-color: rgba(255, 255, 255, 0.2);
+$input-label-color: rgba(255, 255, 255, 0.54);
+$footer-color: rgba(255, 255, 255, 0.8);
+
+/* Box Shadow */
+$btn-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+$btn-shadow-hover: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+$btn-shadow-light: 0 2px 2px 0 rgba(0, 0, 0, 0.24),
+  0 0 2px 0 rgba(0, 0, 0, 0.12); //1
+$wedo-block-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.13);
+$wedo-block-shadow-hover: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+$why-block-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.12);
+$price-block-shadow: 10px 10px 50px 0 rgba(0, 0, 0, 0.12);
+$block-shadow: 0 2px 25px 2px rgba(0, 0, 0, 0.2);
+$map-block-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+$drop-menu-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.24);
+$block-shadow-active: 0 2px 5px 5px rgba(0, 0, 0, 0.12);
+$btn-circle-shadow: inset 0 0 0 5px $white, 0 4px 6px 0 rgba(0, 0, 0, 0.19);
+$header-shadow: inset 0 0 1px $border-color-input,
+  0 2px 6px 0 rgba(0, 0, 0, 0.29);
+$header-main-menu-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
+$faq-link-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.32);
+$authorization-block-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.26);
+$input-label-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.16),
+  0 0 8px 0 rgba(0, 0, 0, 0.12);
+$order-block-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.2);
+$icon-shadow-white: 0 0 0 6px $white;
+$icon-shadow-white-light: 0 0 0 6px $white-light;
+$personal-summary-border: inset 0 -1px 0 $white;
+$personal-info-shadow: 0 2px 5px 2px $border-color-input;
+$modal-content-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.3),
+  0 0 24px 0 rgba(0, 0, 0, 0.22);
+$button-green-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+$button-red-shadow: 0 0 0 7px $white, 0 0 0 8px $red;
+$button-red-shadow-mobile: 0 0 0 5px $white, 0 0 0 6px $red;
+$button-red-light-shadow: 0 0 0 5px $white, 0 0 0 6px $red-light;
+$button-red-light-shadow-mobile: 0 0 0 7px $white, 0 0 0 8px $red-light;
+
+/* Responsive */
+$media-large: 1024px;
+$media-medium: 940px; /* footer */
+$media-small: 768px; /* footer */
+
+$media-xx-large-min: 1260px;
+$media-large-min: 1024px;
+$media-medium-min: 940px; /* footer */
+$media-small-min: 768px; /* footer */
+$media-xx-small-min: 420px;
+
+/* Font Sizes */
+$font12: 0.75rem; /* 12px */
+$font14: 0.875rem; /* 14px */
+$font15: 0.9375rem; /* 15px */
+$font16: 1rem; /* 16px */
+$font17: 1.0625rem; /* 17px */
+$font18: 1.125rem; /* 16px */
+$font20: 1.25rem; /* 20px */
+$font21: 1.3125rem; /* 21px */
+$font22: 1.375rem; /* 22px */
+$font23: 1.4375rem; /* 23px */
+$font24: 1.5rem; /* 24px */
+$font25: 1.5625rem; /* 25px */
+$font26: 1.625rem; /* 26px */
+$font27: 1.6875rem; /* 27px */
+$font28: 1.75rem; /* 28px */
+$font32: 2rem; /* 32px */
+$font34: 2.125rem; /* 34px */
+$font35: 2.1875rem; /* 35px */
+$font40: 2.5rem; /* 40px */
+$font50: 3.125rem; /* 50px */
+$font60: 3.75rem; /* 60px */
+$font80: 5rem; /* 80px */
+
+/* Padding */
+$section-padding: 4.5vw; /* 76px 4rem */
+$view-width: 100vw;
+$length160px: 10.98147vw;
+$length120px: 8.2361vw;
+$length100px: 6.863418vw;
+$length90px: 6.181321vw;
+$length80px: 5.490734vw;
+$length70px: 4.80439vw;
+$length65px: 5.5vw;
+$length60px: 4.11805vw;
+$length56px: 3.84351vw;
+$length50px: 3.47222vw;
+$length45px: 3.08854vw;
+$length44px: 3vw;
+$length40px: 2.77777vw;
+$length35px: 2.4022vw;
+$length32px: 2.19629vw;
+$length30px: 1.875rem;
+$length25px: 1.5625rem;
+$length24px: 1.5rem;
+$length20px: 1.372684rem;
+$length16px: 1rem;
+$length14px: 0.875rem;
+$length8px: 0.5rem;
+
+@mixin media($media) {
+  @if (type-of($media) != string) {
+    @media only screen and (max-width: $media) {
+      @content;
+    }
+  } @else {
+    @if $media == media-small {
+      @media only screen and (max-width: $media-small) {
+        @content;
+      }
+    } @else if $media == media-large {
+      @media only screen and (max-width: $media-large) {
+        @content;
+      }
+    } @else if $media == media-xx-small-min {
+      @media only screen and (min-width: $media-xx-small-min) {
+        @content;
+      }
+    } @else if $media == media-small-min {
+      @media only screen and (min-width: $media-small-min) {
+        @content;
+      }
+    } @else if $media == media-medium-min {
+      @media only screen and (min-width: $media-medium-min) {
+        @content;
+      }
+    } @else if $media == media-large-min {
+      @media only screen and (min-width: $media-large-min) {
+        @content;
+      }
+    } @else if $media == media-xx-large-min {
+      @media only screen and (min-width: $media-xx-large-min) {
+        @content;
+      }
+    }
+
+    /* @2x Images (Pixel Ratio of 1.25+) */
+    @else if $media == ratio2x {
+      @media only screen and (-o-min-device-pixel-ratio: 5/4),
+        only screen and (-webkit-min-device-pixel-ratio: 1.25),
+        only screen and (min-device-pixel-ratio: 1.25),
+        only screen and (min-resolution: 1.25dppx) {
+        @content;
+      }
+    }
+
+    /* @3x Images (Pixel Ratio of 2.25+) */
+    @else if $media == ratio3x {
+      @media only screen and (-o-min-device-pixel-ratio: 9/4),
+        only screen and (-webkit-min-device-pixel-ratio: 2.25),
+        only screen and (min-device-pixel-ratio: 2.25),
+        only screen and (min-resolution: 2.25dppx) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin logo-color-mixin() {
+  background-image: url(/img/different_logo_color.png);
+  background-repeat: no-repeat;
+  width: 94px;
+  height: 94px;
+}
+@mixin logo-color-mixin-small() {
+  background-image: url(/img/different_logo_color.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+@mixin main-header-mixin {
+  background: $white;
+  color: $text-color;
+  box-shadow: $header-shadow;
+}

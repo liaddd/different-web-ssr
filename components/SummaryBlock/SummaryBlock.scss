@@ -1,0 +1,195 @@
+@import "../../pages/index.scss";
+
+.summary-block {
+  font-family: Rubik;
+  .personal-info & {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    flex-basis: 100%;
+    width: 100%;
+    padding: $length20px 0;
+    @include media(media-small-min) {
+      display: none;
+    }
+  }
+  .card & {
+    background-color: $white-light;
+    padding: $length20px 0;
+    flex-basis: 100%;
+    width: 100%;
+    @include media(media-small-min) {
+      border-radius: 100px 0;
+      padding: 4.32692vw 0 $length80px; //63px 78px
+      flex-basis: 40.42553%;
+      width: 40.42553%;
+    }
+  }
+}
+.summary-header,
+.summary-footer {
+  text-align: center;
+  color: $title-color;
+}
+.card {
+  .summary {
+    &:after {
+      right: $font16;
+      box-shadow: $icon-shadow-white-light;
+    }
+    &:before {
+      right: 33px;
+    }
+  }
+}
+.personal-info {
+  .summary {
+    &:after {
+      right: 24px;
+      box-shadow: $icon-shadow-white;
+    }
+    &:before {
+      right: 40px;
+    }
+  }
+}
+.summary {
+  padding-right: 5rem;
+  padding-left: 1rem;
+  position: relative;
+  padding-bottom: $length16px;
+  @include media(media-large-min) {
+    padding-left: 5rem;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    border-radius: 8px;
+  }
+  &:first-of-type:after {
+    background: $red url(/img/avatar-icon-white.svg) center no-repeat;
+  }
+  &:nth-child(2):after {
+    background: $red url(/img/home-icon-white.svg) center no-repeat;
+  }
+  &:nth-child(3):after {
+    background: $red url(/img/id-tag-icon-white.svg) center no-repeat;
+  }
+  &:nth-child(4):after {
+    background: $red url(/img/form-icon-white.svg) center no-repeat;
+  }
+  &:not(:last-child):before {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    content: "";
+    width: 1px;
+    height: auto;
+    margin: auto;
+    background-color: $red;
+  }
+}
+.summary-header {
+  padding: 0 $font16 $font24;
+  @include media(media-small-min) {
+    padding: 0 30px 55px;
+  }
+}
+@include media(767px) {
+  .summary-header-img {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 11px;
+    background-size: 88px 88px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(/img/modal-user-icon-shield-v.png);
+    @include media(ratio2x) {
+      background-image: url(/img/modal-user-icon-shield-v@2x.png);
+    }
+    @include media(ratio3x) {
+      background-image: url(/img/modal-user-icon-shield-v@3x.png);
+    }
+  }
+}
+.summary-header-title {
+  font-size: $font24;
+  margin-bottom: 0;
+  font-family: "Rubik";
+  @include media(media-large-min) {
+    font-size: $font32;
+  }
+}
+.summary-header-subtitle {
+  font-size: $font20;
+  font-weight: 500;
+}
+.summary-title {
+  font-size: $font16;
+  color: $black;
+  position: relative;
+  margin-bottom: 17px;
+  @include media(media-small-min) {
+    font-size: $font20;
+  }
+  &:after {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    content: "";
+    width: 30px;
+    height: 2px;
+    margin: auto;
+    border-radius: 4px;
+    background-color: $red;
+  }
+}
+.summary-content {
+  display: inline-block;
+  margin-left: 1ch;
+  font-size: $font16;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 115%;
+  @include media(media-small-min) {
+    font-size: $font18;
+    display: block;
+    margin-left: 0;
+    line-height: 125%;
+  }
+}
+.summary-text-name {
+  font-size: $font14;
+  @include media(media-small-min) {
+    font-size: inherit;
+  }
+}
+.summary-footer {
+  .card & {
+    border-top: solid 1px $border-color-input;
+    width: calc(100% - 60px);
+  }
+  .personal-info & {
+    margin-top: $font24;
+    width: calc(100% - 48px);
+    .btn-block {
+      margin-top: 30px;
+    }
+  }
+  margin: 0 auto;
+}
+.monthly-rent {
+  font-size: $font18;
+  margin-bottom: 0;
+  margin-top: 15px;
+  line-height: 130%;
+}
+.total-monthly {
+  font-size: $font16;
+  margin-bottom: 0;
+  margin-top: 0;
+}

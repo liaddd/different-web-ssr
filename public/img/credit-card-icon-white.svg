@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="credit-card-icon-white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+	<path fill="#FFFFFF" d="M1.571,19.657H22.43c0.865,0,1.57-0.714,1.57-1.591V5.935c0-0.878-0.705-1.592-1.57-1.592H1.571
+			C0.705,4.343,0,5.057,0,5.935v12.132C0,18.943,0.705,19.657,1.571,19.657z M23.215,18.066c0,0.444-0.353,0.806-0.785,0.806H1.571
+			c-0.433,0-0.786-0.361-0.786-0.806v-0.929h22.429V18.066L23.215,18.066z M0.786,5.935c0-0.445,0.353-0.807,0.785-0.807h20.858
+			c0.433,0,0.786,0.361,0.786,0.807v7.276H0.786V5.935z"/>
+</svg>

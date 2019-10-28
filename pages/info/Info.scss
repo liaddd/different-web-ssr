@@ -1,0 +1,107 @@
+@import "../styles/main.scss";
+.info-page {
+  padding: 6.93205vw 1rem 10.157859vw; //101px 148px
+}
+.info-block {
+  border-radius: 100px 0;
+  box-shadow: $block-shadow;
+  background-color: $white;
+  padding: 4.13279vw 10px 3.84351vw; //61px 56px
+  text-align: center;
+  .info-text {
+    font-family: Rubik;
+    &.info-text-center {
+      margin: 7.961565vw auto 9.31507vw; //116px 136px
+    }
+  }
+  .btn-block:not(:last-child) {
+    margin-top: 2.88264vw; //42px
+    margin-bottom: 1rem;
+  }
+  .btn {
+    min-width: 240px;
+    .text-w {
+      color: $white;
+    }
+  }
+  .info-contacts {
+    color: $dark;
+    font-size: $font16;
+    @include media(media-small-min) {
+      font-size: $font21;
+    }
+  }
+  p:not(.info-contacts) {
+    color: $dark2;
+    font-size: $font16;
+    @include media(media-small-min) {
+      font-size: $font21;
+    }
+    strong {
+      color: $title-color;
+    }
+  }
+}
+.info-title {
+  font-size: $font24;
+  color: $title-color;
+  margin-bottom: $length20px;
+  @include media(media-small-min) {
+    font-size: $font32;
+  }
+}
+.info-subtitle {
+  font-size: $font16;
+  margin-bottom: 2.47083vw; //36px
+  @include media(media-small-min) {
+    font-size: $font21;
+  }
+}
+.info-column {
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.info-column-item {
+  flex-basis: 100%;
+  width: 100%;
+  font-weight: 300;
+  font-size: $font16;
+  @include media(media-small-min) {
+    font-size: $font20;
+    flex-basis: 50%;
+    width: 50%;
+  }
+  p {
+    margin: 6px auto 0;
+  }
+  .info-column-title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  &:first-of-type {
+    .info-column-title {
+      color: $dark;
+    }
+  }
+  &:nth-of-type(2) {
+    position: relative;
+    .info-column-title,
+    a {
+      color: $title-color;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      border-right: 1px solid $border-color-input;
+      right: 0;
+      top: 50%;
+      height: 24px;
+      transform: translateY(-50%);
+    }
+  }
+}

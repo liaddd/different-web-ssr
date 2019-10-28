@@ -1,0 +1,99 @@
+@import "../../pages/index.scss";
+/*   Why Section */
+
+.section-why {
+  text-align: center;
+  padding: 4.941661vw $length16px $length50px; //72px 55px
+  @include media(media-small-min) {
+    padding-bottom: $length45px;
+  }
+
+  .section-heading {
+    margin-bottom: 1.5625rem;
+    @include media(media-small-min) {
+      margin-bottom: $length65px;
+    }
+  }
+}
+
+.why-block {
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.why {
+  flex-basis: 100%;
+  padding: $length8px $length30px;
+  max-width: 100%;
+  @include media(media-small-min) {
+    min-height: 272px;
+    max-width: 33%;
+    flex-basis: 33%;
+  }
+  .why-icon {
+    background-position: center;
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    border: 10px solid $white;
+    border-radius: 0 14px;
+    box-shadow: $why-block-shadow;
+    box-sizing: content-box;
+    margin: auto;
+    &:hover {
+      box-shadow: $wedo-block-shadow-hover;
+    }
+  }
+  &:first-of-type {
+    .why-icon {
+      background-image: url(/img/why-block-1.png);
+      @include media(ratio2x) {
+        background-image: url(/img/why-block-1@2x.png);
+      }
+      @include media(ratio3x) {
+        background-image: url(/img/why-block-1@3x.png);
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    .why-icon {
+      background-image: url(/img/why-block-2@2x.png);
+      @include media(ratio2x) {
+        background-image: url(/img/why-block-2@2x.png);
+      }
+      @include media(ratio3x) {
+        background-image: url(/img/why-block-2@3x.png);
+      }
+    }
+  }
+  &:nth-of-type(3) {
+    .why-icon {
+      background-image: url(/img/why-block-3.png);
+      @include media(ratio2x) {
+        background-image: url(/img/why-block-3@2x.png);
+      }
+      @include media(ratio3x) {
+        background-image: url(/img/why-block-3@3x.png);
+      }
+    }
+  }
+  h3 {
+    color: $red;
+    font-size: $font21;
+    line-height: 130%;
+    margin-top: $length24px;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0 auto;
+    font-size: $font18;
+    line-height: 130%;
+    margin-bottom: 1rem;
+  }
+}
+
+/*   End Why Section */

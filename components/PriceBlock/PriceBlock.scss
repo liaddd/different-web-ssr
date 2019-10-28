@@ -1,0 +1,99 @@
+/*   Price Section */
+@import "../../pages/styles/main.scss";
+
+.section-price {
+  border-top-right-radius: 100px;
+  text-align: center;
+  padding: 2rem 0 0;
+  background: $red;
+  background-image: linear-gradient(34deg, $red-light, $red);
+  @include media(media-small-min) {
+    padding: $length70px 0 0; //70px
+  }
+
+  .section-heading {
+    color: $white;
+    margin-bottom: 2.5rem; //40px
+    &:after {
+      background-color: $white;
+    }
+    @include media(media-small-min) {
+      margin-bottom: 2.9375rem; //47px
+    }
+  }
+}
+
+.price-container {
+  display: inline-flex;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  @include media(media-small-min) {
+    justify-content: space-between;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    height: 100px;
+    background-color: $white;
+    bottom: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.price-block {
+  background-color: $white;
+  border-bottom-right-radius: 100px;
+  box-shadow: $price-block-shadow;
+  padding: 27px $length14px 2.19629vw; //62px 32px
+  flex-basis: calc(100% - 1rem);
+  min-height: 389px;
+  @include media(media-small-min) {
+    min-height: 522px;
+    flex-basis: 50%;
+    padding: 4.25532vw $length16px 2.19629vw; //62px 32px
+  }
+  @include media(media-large-min) {
+    flex-basis: calc(50% - 6.58888vw); //96px
+  }
+}
+.price-img-block {
+  display: none;
+  @include media(media-small-min) {
+    display: block;
+    text-align: left;
+    flex-basis: calc(53% - 6.86342vw); //100px
+
+    .hot-air-balloon-team {
+      background-image: url(/img/hot-air-balloon-team.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      display: inline-block;
+      background-size: 300px 300px;
+      width: 300px;
+      height: 300px;
+      z-index: 1;
+      transition: all 0.3s ease;
+      @include media(media-large-min) {
+        background-size: 400px 400px;
+        height: 400px;
+        width: 400px;
+      }
+      @include media(ratio2x) {
+        background-image: url(/img/hot-air-balloon-team@2x.png);
+      }
+      @include media(ratio3x) {
+        background-image: url(/img/hot-air-balloon-team@3x.png);
+      }
+    }
+  }
+}
+
+/*   End Price Section */
