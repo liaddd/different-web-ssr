@@ -1,0 +1,1 @@
+{"ast":null,"code":"/*\n * action types\n */\nexport var TOGGLE_ACCOUNT_MENU = 'TOGGLE_ACCOUNT_MENU';\nexport default {\n  TOGGLE_ACCOUNT_MENU: TOGGLE_ACCOUNT_MENU\n};","map":null,"metadata":{},"sourceType":"module"}
