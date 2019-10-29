@@ -9,8 +9,6 @@ class Service extends Component {
   render() {
     let output;
     let currentPath = parseInt(this.props.router.asPath.split('/')[2])
-    console.log(currentPath)
-    console.log(this.props)
     let pageHeader='';
     switch(currentPath){
         case 1:

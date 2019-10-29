@@ -7,13 +7,13 @@ import PriceBlock from "./../PriceBlock/PriceBlock";
 import ModalHome from "./../Modal/ModalHome";
 import ModalSubscribe from "./../Modal/ModalSubscribe";
 import StarModal from "./../Modal/StarModal";
-import ModalVideo from "./../Modal/ModalVideo"
+import ModalVideo from "./../Modal/ModalVideo";
 class MainPage extends Component {
   state = {
     showModalHome: false,
     showModalSubscribe: false,
     showStarModal: false,
-    showVideoModal:false
+    showVideoModal: false
   };
 
   onShowPopup = showModalHome => {
@@ -25,8 +25,8 @@ class MainPage extends Component {
   onShowStar = showStarModal => {
     this.setState({ showStarModal });
   };
-  onShowVideo = (showVideoModal) => {
-    this.setState({showVideoModal})
+  onShowVideo = showVideoModal => {
+    this.setState({ showVideoModal });
   };
 
   render() {
@@ -37,7 +37,10 @@ class MainPage extends Component {
           onSowSubscibe={this.onSowSubscibe}
           onShowVideo={this.onShowVideo}
         />
-        <ModalVideo show={this.state.showVideoModal} onShowVideo={this.onShowVideo}/>
+        <ModalVideo
+          show={this.state.showVideoModal}
+          onShowVideo={this.onShowVideo}
+        />
         <LinkBlock />
         <WeDoBlock />
         <PriceBlock />
