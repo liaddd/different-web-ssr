@@ -103,8 +103,8 @@ class CardBlock extends Component {
                   "CVV": this.state.cvv,
                   "CitizenID": this.state.idNumber,
                   "Credentials": {
-                    "CompanyID": `${process.env.REACT_APP_CARD_COMPANY_NAME_ID}`,
-                    "APIPublicKey": `${process.env.REACT_APP_CARD_COMPANY_API_PUBLIK_KEY}`
+                    "CompanyID": 34087818,
+                    "APIPublicKey": "HQDWdkU5aGZ3za8faQtleVaKmCOjJ8BtZk0wYV47ii3GlW6oXS"
                   },
                   "ResponseLanguage": "he"
                 },

@@ -1,15 +1,15 @@
 import axios from "axios";
 
 export const config = {
-  baseURL: `${process.env.REACT_APP_BASE_HOST}`,
+  baseURL: "https://api.ballabaapis.com/",
   headers: {
     "Content-Type": "application/json",
-    device_id: `${process.env.REACT_APP_DEVICE_MOCK_ID}`
+    device_id: 123123123
   }
 };
 
 export const cardCheckerConfig = {
-  baseURL: `${process.env.REACT_APP_CARD_CHECKER_URL}`,
+  baseURL: "https://www.myofficeguy.com/",
   headers: {
     "Content-Type": "application/json"
   }

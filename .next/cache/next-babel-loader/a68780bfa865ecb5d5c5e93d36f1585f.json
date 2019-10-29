@@ -1,1 +1,0 @@
-{"ast":null,"code":"import actions from './modal.actions';\nimport constants from './modal.actions.constants';\nexport default {\n  actions,\n  constants\n};","map":null,"metadata":{},"sourceType":"module"}

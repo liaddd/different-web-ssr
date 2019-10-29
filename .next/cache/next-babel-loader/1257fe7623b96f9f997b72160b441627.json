@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { SHOW_CLOSE_MODAL } from \"./modal.actions.constants\";\n/*\n * action creators\n */\n// show close modal action\n\nexport function showCloseModal(showModal) {\n  return {\n    type: SHOW_CLOSE_MODAL,\n    payload: {\n      showModal\n    }\n  };\n}\nexport default {\n  showCloseModal\n};","map":null,"metadata":{},"sourceType":"module"}

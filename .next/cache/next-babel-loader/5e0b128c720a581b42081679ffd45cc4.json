@@ -1,1 +1,0 @@
-{"ast":null,"code":"// RESET_STORE is reset for logout\nexport var RESET_STORE = \"RESET_STORE\"; //\n\nexport var MOBILE_VIEW_SIZE = 767;","map":null,"metadata":{},"sourceType":"module"}

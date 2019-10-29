@@ -18,7 +18,8 @@ import {
   CUSTOMIZED_CONTRACT,
   AUTH_TOKEN
 } from "./routes.constants";
-
+const REACT_APP_BASE_HOST = "https://api.ballabaapis.com/";
+const REACT_APP_BASE_STAGE = "Dev";
 // Api is axios wrapper class
 export default class Api {
   // login is first step for authorization
@@ -29,10 +30,7 @@ export default class Api {
   // @param string os_version ,
   // @param string is_agent ,
   static login(data) {
-    return axiosInstance.post(
-      `${process.env.REACT_APP_BASE_STAGE}/${ROUTE_LOGIN}`,
-      data
-    );
+    return axiosInstance.post(REACT_APP_BASE_STAGE + "/" + ROUTE_LOGIN, data);
   }
 
   // auth is second step for authorization
@@ -44,34 +42,25 @@ export default class Api {
   // @param string is_agent ,
   // https://api.ballaba-it.com/{STAGE}/authenticate
   static auth(data) {
-    return axiosInstance.post(
-      `${process.env.REACT_APP_BASE_STAGE}${ROUTE_AUTH}`,
-      data
-    );
+    return axiosInstance.post(REACT_APP_BASE_STAGE + ROUTE_AUTH, data);
   }
   static contactEmail(data) {
     return axios.post(
-      `${process.env.REACT_APP_BASE_HOST +
-        process.env.REACT_APP_BASE_STAGE}${CONTACT}`,
+      REACT_APP_BASE_HOST + REACT_APP_BASE_STAGE + CONTACT,
       data
     );
   }
 
   static customizedContract(data) {
     return axios.post(
-      `${process.env.REACT_APP_BASE_HOST +
-        process.env.REACT_APP_BASE_STAGE}${CUSTOMIZED_CONTRACT}`,
+      REACT_APP_BASE_HOST + REACT_APP_BASE_STAGE + CUSTOMIZED_CONTRACT,
       data
     );
   }
   static authByToken(token) {
     config.headers.global_token = token;
 
-    return axios.post(
-      `${process.env.REACT_APP_BASE_STAGE}${AUTH_TOKEN}`,
-      {},
-      config
-    );
+    return axios.post(REACT_APP_BASE_STAGE + AUTH_TOKEN, {}, config);
   }
   // step1 is firts step for stepper
   // @param string data - object
@@ -83,11 +72,7 @@ export default class Api {
   static step1(data, session_token) {
     config.headers.session_token = session_token;
     config.headers = omit(config.headers, ["global_token"]);
-    return axios.put(
-      `${process.env.REACT_APP_BASE_STAGE}${STEP1}`,
-      data,
-      config
-    );
+    return axios.put(REACT_APP_BASE_STAGE + STEP1, data, config);
   }
 
   // step2 is second step for stepper
@@ -100,11 +85,7 @@ export default class Api {
   static step2(data, session_token) {
     config.headers.session_token = session_token;
     config.headers = omit(config.headers, ["global_token"]);
-    return axios.post(
-      `${process.env.REACT_APP_BASE_STAGE}${STEP2}`,
-      data,
-      config
-    );
+    return axios.post(REACT_APP_BASE_STAGE + STEP2, data, config);
   }
 
   // step3 is third step for stepper
@@ -117,17 +98,13 @@ export default class Api {
   static step3(data, session_token) {
     config.headers.session_token = session_token;
     config.headers = omit(config.headers, ["global_token"]);
-    return axios.post(
-      `${process.env.REACT_APP_BASE_STAGE}${STEP3}`,
-      data,
-      config
-    );
+    return axios.post(REACT_APP_BASE_STAGE + STEP3, data, config);
   }
   static getContracts(token) {
     config.headers.session_token = token;
     config.headers = omit(config.headers, ["global_token"]);
     return axios.get(
-      `${process.env.REACT_APP_BASE_HOST}${process.env.REACT_APP_BASE_STAGE}${CONTRACTS}`,
+      REACT_APP_BASE_HOST + REACT_APP_BASE_STAGE + CONTRACTS,
       config
     );
   }
@@ -142,11 +119,7 @@ export default class Api {
   static step4(data, session_token) {
     config.headers.session_token = session_token;
     config.headers = omit(config.headers, ["global_token"]);
-    return axios.post(
-      `${process.env.REACT_APP_BASE_STAGE}${STEP4}`,
-      data,
-      config
-    );
+    return axios.post(REACT_APP_BASE_STAGE + STEP4, data, config);
   }
 
   // cardChecker
@@ -158,10 +131,6 @@ export default class Api {
   static guaranteeAgreement(data, session_token) {
     config.headers.session_token = session_token;
     config.headers = omit(config.headers, ["global_token"]);
-    return axios.post(
-      `${process.env.REACT_APP_BASE_STAGE}${GUARANTEE_AGREEMENT}`,
-      data,
-      config
-    );
+    return axios.post(REACT_APP_BASE_STAGE + GUARANTEE_AGREEMENT, data, config);
   }
 }
