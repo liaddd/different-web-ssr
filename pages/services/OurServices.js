@@ -7,8 +7,9 @@ import "./OurServices.scss";
 
 class Service extends Component {
   render() {
-    let output;
+    let output="";
     let currentPath = parseInt(this.props.router.asPath.split('/')[2])
+    console.log(currentPath)
     let pageHeader='';
     switch(currentPath){
         case 1:

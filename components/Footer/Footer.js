@@ -5,7 +5,12 @@ import "./Footer.scss";
 import LogoGrey from "./../../public/icons/different_logo_white.png";
 import Facebook from "./../../public/icons/facebook-icon.svg";
 import Linkedin from "./../../public/icons/linkedin-icon.svg";
-const services = ['הבטחת שכר דירה' , 'פינוי שוכר' , 'תשלום שכר דירה בכרטיס אשראי' , 'בדיקת רקע של שוכרים']
+const services = [
+  "הבטחת שכר דירה",
+  "פינוי שוכר",
+  "תשלום שכר דירה בכרטיס אשראי",
+  "בדיקת רקע של שוכרים"
+];
 
 const Footer = () => {
   return (
@@ -97,7 +102,7 @@ const Footer = () => {
                 {services.map((service, index) => (
                   <Link
                     key={index}
-                    href={{ pathname: "/services" }}
+                    href={{ pathname: "/services/[id]" }}
                     as={`/services/${index + 1}`}
                   >
                     <a>{service}</a>
