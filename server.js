@@ -11,9 +11,6 @@ app.prepare().then(() => {
   server.get("/personal-info/:id", (req, res) => {
     return app.render(req, res, "/personal-info");
   });
-  server.get("/services/:id", (req, res) => {
-    return app.render(req, res, "/services");
-  });
   server.get("/robots.txt", (req, res) => {
     return res.sendFile(path.join(__dirname, "/robots.txt"));
   });

@@ -866,6 +866,14 @@ ul.clear-list {
     padding-bottom: $length120px; //120px
   }
 }
+.column {
+  display: inline-flex;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  width: 100%;
+}
 
 .page-content {
   padding: $length16px;

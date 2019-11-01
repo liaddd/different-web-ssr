@@ -5,12 +5,6 @@ import "./Footer.scss";
 import LogoGrey from "./../../public/icons/different_logo_white.png";
 import Facebook from "./../../public/icons/facebook-icon.svg";
 import Linkedin from "./../../public/icons/linkedin-icon.svg";
-const services = [
-  "הבטחת שכר דירה",
-  "פינוי שוכר",
-  "תשלום שכר דירה בכרטיס אשראי",
-  "בדיקת רקע של שוכרים"
-];
 
 const Footer = () => {
   return (
@@ -99,15 +93,20 @@ const Footer = () => {
                 <span className="links-block-title">
                   <strong>השירותים שלנו</strong>
                 </span>
-                {services.map((service, index) => (
-                  <Link
-                    key={index}
-                    href={{ pathname: "/services/[id]" }}
-                    as={`/services/${index + 1}`}
-                  >
-                    <a>{service}</a>
-                  </Link>
-                ))}
+
+                <Link href="/services/tenant-eviction">
+                  <a>פינוי שוכר</a>
+                </Link>
+
+                <Link href="/services/rent-check">
+                  <a>בדיקת רקע של שוכרים</a>
+                </Link>
+                <Link href="/services/rent-guarantee">
+                  <a>הבטחת שכר דירה</a>
+                </Link>
+                <Link href="/services/payment-of-rent">
+                  <a>תשלום שכר דירה בכרטיס אשראי</a>
+                </Link>
               </nav>
             </div>
           </div>
