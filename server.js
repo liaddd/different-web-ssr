@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-
+const path = require("path");
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -10,9 +10,6 @@ app.prepare().then(() => {
   const server = express();
   server.get("/personal-info/:id", (req, res) => {
     return app.render(req, res, "/personal-info");
-  });
-  server.get("/services/:id", (req, res) => {
-    return app.render(req, res, "/services");
   });
   server.get("/robots.txt", (req, res) => {
     return res.sendFile(path.join(__dirname, "/robots.txt"));
