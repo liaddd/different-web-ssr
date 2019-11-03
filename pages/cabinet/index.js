@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const CabinetPage = () => {
   return (
     <>
-      <Head title="DiffeRent">
+      <Head title="DiffeRent" ogTitle="האזור האישי שלי">
         <div lang="he" dir="rtl" className="app cabinet">
           <Header />
           <MyProfile />

@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const PersonalInfoPage = () => {
   return (
     <>
-      <Head title="DiffeRent">
+      <Head title="DiffeRent" ogTitle="הצטרפות לשירות">
         <div lang="he" dir="rtl" className="app personal-info">
           <Header />
           <PersonalInfo />

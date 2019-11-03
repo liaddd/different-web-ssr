@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentCheck = () => {
   return (
     <>
-      <Head title="DiffeRent">
+      <Head title="DiffeRent" ogTitle="בדיקת רקע של שוכרים">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="בדיקת רקע של שוכרים" />

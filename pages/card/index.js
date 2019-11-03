@@ -9,7 +9,7 @@ import "./../styles/main.scss";
 const CardPage = props => {
   return (
     <>
-      <Head title="DiffeRent">
+      <Head title="DiffeRent" ogTitle="מסך תשלום">
         <div lang="he" dir="rtl" className="app card">
           <Header />
           <Card />

@@ -104,7 +104,7 @@ const Footer = () => {
                 <Link href="/services/rent-guarantee">
                   <a>הבטחת שכר דירה</a>
                 </Link>
-                <Link href="/services/payment-of-rent">
+                <Link href="/services/rent-payment">
                   <a>תשלום שכר דירה בכרטיס אשראי</a>
                 </Link>
               </nav>

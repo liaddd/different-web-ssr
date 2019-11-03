@@ -7,7 +7,7 @@ import "./../styles/main.scss";
 const SignInPage = () => {
   return (
     <>
-      <Head title="DiffeRent">
+      <Head title="DiffeRent" ogTitle="התחברות">
         <div lang="he" dir="rtl" className="app signin">
           <SignIn />
         </div>

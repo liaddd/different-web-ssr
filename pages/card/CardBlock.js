@@ -234,6 +234,14 @@ class CardBlock extends Component {
                                                         this.setState({cardExpireDate: e.target.value})
                                                     }
                                                 }
+                                                onBlur={
+                                                    (e) => {
+                                                        if(this.state.cardExpireDate && !this.state.cardExpireDate.includes("/")){
+                                                            this.setState({cardExpireDate : e.target.value.slice(0 , 2) + "/" + e.target.value.slice(2,4)})
+                                                            e.target.value = e.target.value.slice(0 , 2) + "/" + e.target.value.slice(2,4)
+                                                        }
+                                                    }
+                                                }
                                             />
                                             <span className="input-label-span">
                                                 תוקף הכרטיס

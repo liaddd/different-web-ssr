@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentGuarantee = () => {
   return (
     <>
-      <Head title="DiffeRent">
+      <Head title="DiffeRent" ogTitle="הבטחת שכר דירה">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="הבטחת שכר דירה" />

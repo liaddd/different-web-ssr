@@ -23,7 +23,7 @@ const PageHeaderHome = ({ auth, onShowVideo }) => {
             <div className="btn-flex-btn">
               <Link href={auth ? "/personal-info/1" : "/signin"}>
                 <a className="btn btn-blue btn-medium menu-btn-link">
-                  אני בעל דירה
+                  בואו נתחיל
                 </a>
               </Link>
 
