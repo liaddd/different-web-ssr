@@ -29,7 +29,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572916139399");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943618861");
           });
       }
     }
@@ -66,7 +66,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572916139413");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943618870");
           });
       }
     }
@@ -103,7 +103,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572916295082");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943794340");
           });
       }
     }
@@ -111,9 +111,9 @@
 
 /***/ }),
 
-/***/ "./pages/personal-info/PersonalInfo.scss":
+/***/ "./components/PageHeader/PageHeader.scss":
 /*!***********************************************!*\
-  !*** ./pages/personal-info/PersonalInfo.scss ***!
+  !*** ./components/PageHeader/PageHeader.scss ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -140,7 +140,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572916294703");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943619141");
           });
       }
     }
@@ -148,10 +148,10 @@
 
 /***/ }),
 
-/***/ "./pages/personal-info/ReactDatePicker.scss":
-/*!**************************************************!*\
-  !*** ./pages/personal-info/ReactDatePicker.scss ***!
-  \**************************************************/
+/***/ "./pages/questions-and-answers/QuestionsAndAnswers.scss":
+/*!**************************************************************!*\
+  !*** ./pages/questions-and-answers/QuestionsAndAnswers.scss ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -177,7 +177,44 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572916294931");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943668925");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./pages/signin/Authorization.scss":
+/*!*****************************************!*\
+  !*** ./pages/signin/Authorization.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943794176");
           });
       }
     }
@@ -214,7 +251,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572916139392");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572943618852");
           });
       }
     }

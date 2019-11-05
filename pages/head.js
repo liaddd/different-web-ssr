@@ -11,6 +11,7 @@ let internalPages = "משכירים דירות בראש שקט"
 
 const Head = props => {
 
+  console.log(props)
   ogTitle = props.ogTitle != null ? `DiffeRent | ${props.ogTitle} - ${internalPages}` : defaultTitle;
   defaultDescription = props.defaultDescription ? props.defaultDescription : defaultDescription;
 
@@ -38,7 +39,7 @@ const Head = props => {
         id="ze-snippet"
         src="https://static.zdassets.com/ekr/snippet.js?key=01c76c6a-b643-4fa7-9a06-11d8c9ef03f5"
       ></script> */}
-      <title>{props.title || defaultTitle}</title>
+      <title>{ogTitle || props.title}</title>
       <meta
         name="description"
         content={props.description || defaultDescription}
