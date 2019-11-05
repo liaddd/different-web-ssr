@@ -21,7 +21,7 @@ const PageHeaderHome = ({ auth, onShowVideo }) => {
               <div className="page-header-home-subtitle">טיפול בדייר סרבן</div>
             </div>
             <div className="btn-flex-btn">
-              <Link href={auth ? "/personal-info/1" : "/signin"}>
+              <Link href={auth ? "/personal-info/step1" : "/signin"}>
                 <a className="btn btn-blue btn-medium menu-btn-link">
                   בואו נתחיל
                 </a>

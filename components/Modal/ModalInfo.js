@@ -41,7 +41,7 @@ class ModalInfo extends Component {
                   שעות פעילות: ימים א'-ה' בין השעות 9:00-19:00.
                 </div>
 
-                <Link href={"/personal-info"} as={"/personal-info/1"}>
+                <Link href={"/personal-info/step1"}>
                   <a className="btn btn-blue btn-small">
                     <div className="btn-block">
                       + הוסף בטחון בשכירות לנכס נוסף

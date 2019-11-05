@@ -24,9 +24,7 @@ class PersonalInfoStepMenu extends Component {
               onClick={() => {
                 if (this.props.stepper.step1.edit) {
                   this.props.onSetStepper({ activeStep: 1 });
-                  Router.push("/personal-info", "/personal-info/1", {
-                    shallow: true
-                  });
+                  Router.push("/personal-info/step1");
                 }
               }}
             ></label>
@@ -44,9 +42,7 @@ class PersonalInfoStepMenu extends Component {
               onClick={() => {
                 if (this.props.stepper.step2.edit) {
                   this.props.onSetStepper({ activeStep: 2 });
-                  Router.push("/personal-info", "/personal-info/2", {
-                    shallow: true
-                  });
+                  Router.push("/personal-info/step2");
                 }
               }}
             ></label>
@@ -64,9 +60,7 @@ class PersonalInfoStepMenu extends Component {
               onClick={() => {
                 if (this.props.stepper.step3.edit) {
                   this.props.onSetStepper({ activeStep: 3 });
-                  Router.push("/personal-info", "/personal-info/3", {
-                    shallow: true
-                  });
+                  Router.push("/personal-info/step3");
                 }
               }}
             ></label>
@@ -85,9 +79,7 @@ class PersonalInfoStepMenu extends Component {
               onClick={() => {
                 if (this.props.stepper.step4.edit) {
                   this.props.onSetStepper({ activeStep: 4 });
-                  Router.push("/personal-info", "/personal-info/4", {
-                    shallow: true
-                  });
+                  Router.push("/personal-info/step4");
                 }
               }}
             ></label>

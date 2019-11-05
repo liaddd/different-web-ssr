@@ -96,7 +96,7 @@ class AuthorizationStep2 extends Component {
         data.data.showModal = false;
         setCookie("global_token", data.data.auth.global_token);
         this.props.onSetUserData(data.data);
-        Router.push("/personal-info");
+        Router.push("/personal-info/step1");
         /* if (this.props.user.showStepsAfterLogin) {
           Router.push("/personal-info");
         } else {
