@@ -12,7 +12,6 @@ let canonical = "https://www.diffe-rent.co.il/"
 
 const Head = props => {
 
-  console.log(props)
   ogTitle = props.ogTitle != null ? `DiffeRent | ${props.ogTitle} - ${internalPages}` : defaultTitle;
   defaultDescription = props.defaultDescription ? props.defaultDescription : defaultDescription;
   canonical = `https://www.diffe-rent.co.il/${props.canonical || ''}`
