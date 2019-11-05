@@ -63,7 +63,7 @@ class PersonalInfoSummary extends Component {
                   step1.edit && activeStep !== STEPPER_STEP1
               })}
             >
-              <Link href={"/personal-info"} as={"/personal-info/1"}>
+              <Link href={"/personal-info/step1"}>
                 <div
                   className="personal-summary-icon"
                   onClick={() => {
@@ -74,7 +74,9 @@ class PersonalInfoSummary extends Component {
                 ></div>
               </Link>
 
-              <h2 className="personal-summary-title">פרטים אישיים של בעל הדירה</h2>
+              <h2 className="personal-summary-title">
+                פרטים אישיים של בעל הדירה
+              </h2>
               <div className="personal-summary-subtitle">
                 מהם פרטיו של בעל הדירה?
               </div>
@@ -112,7 +114,7 @@ class PersonalInfoSummary extends Component {
                   step2.edit && activeStep !== STEPPER_STEP2
               })}
             >
-              <Link href={"/personal-info"} as={"/personal-info/2"}>
+              <Link href={"/personal-info/step2"}>
                 <div
                   className="personal-summary-icon"
                   onClick={() => {
@@ -151,7 +153,7 @@ class PersonalInfoSummary extends Component {
                   step3.edit && activeStep !== STEPPER_STEP3
               })}
             >
-              <Link href={"/personal-info"} as={"/personal-info/3"}>
+              <Link href={"/personal-info/step3"}>
                 <div
                   className="personal-summary-icon"
                   onClick={() => {
@@ -270,7 +272,7 @@ class PersonalInfoSummary extends Component {
                   step4.edit && activeStep !== STEPPER_STEP4
               })}
             >
-              <Link href={"/personal-info"} as={"/personal-info/4"}>
+              <Link href={"/personal-info/step4"}>
                 <div
                   className="personal-summary-icon"
                   onClick={() => {

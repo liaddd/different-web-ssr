@@ -65,7 +65,7 @@ class Card extends Component {
                 </nav>
               </div>
               <div className="arrow-right-block">
-                <Link href={"/personal-info"} as={"/personal-info/4"}>
+                <Link href={"/personal-info/step4"}>
                   <a className="arrow-right-link">חזור</a>
                 </Link>
               </div>

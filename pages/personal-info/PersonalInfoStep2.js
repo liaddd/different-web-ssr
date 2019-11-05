@@ -115,7 +115,7 @@ class PersonalInfoStep2 extends Component {
               edit: true
             }
           });
-          Router.push("/personal-info", "/personal-info/3", { shallow: true });
+          Router.push("/personal-info/step3");
         })
         .catch(error => {
           console.error(error);

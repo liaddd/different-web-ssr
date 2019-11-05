@@ -57,7 +57,7 @@ class ModalButtonsBlock extends Component {
               this.props.users.map((user, i) => this.userRender(user, i))}
           </nav>
           <div className="btn-block">
-            <Link href={"/personal-info"} as={"/personal-info/4"}>
+            <Link href={"/personal-info/step4"}>
               <button
                 disabled={!this.state.step4}
                 className={cn("btn btn-small", {

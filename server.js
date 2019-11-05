@@ -8,9 +8,6 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express();
-  server.get("/personal-info/:id", (req, res) => {
-    return app.render(req, res, "/personal-info");
-  });
   server.get("/robots.txt", (req, res) => {
     return res.sendFile(path.join(__dirname, "/robots.txt"));
   });

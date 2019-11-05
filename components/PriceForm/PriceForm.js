@@ -80,10 +80,7 @@ class PriceForm extends Component {
               </p>
               <div className="btn-block">
                 <Link
-                  href={{
-                    pathname: this.props.auth ? "/personal-info" : "/signin"
-                  }}
-                  as={`/personal-info/1`}
+                  href={this.props.auth ? "/personal-info/step1" : "/signin"}
                 >
                   <a
                     onClick={() => {

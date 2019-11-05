@@ -109,7 +109,7 @@ class PersonalInfoStep1 extends Component {
               edit: true
             }
           });
-          Router.push("/personal-info", "/personal-info/2", { shallow: true });
+          Router.push("/personal-info/step2");
         })
         .catch(error => {
           if (get(error, "response.data.errorCode") === "INVALID_ID") {

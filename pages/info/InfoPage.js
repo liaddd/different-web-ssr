@@ -48,7 +48,7 @@ const Info = props => {
               שעות פעילות: ימים א'-ה' בין השעות 9:00-18:00.
             </p>
             <div className="btn-block">
-              <Link href={"/personal-info"} as={"/personal-info/1"}>
+              <Link href={"/personal-info/step1"}>
                 <div className="text-w">
                   <button className="btn btn-blue btn-small ">
                     + הוסף בטחון לשכירות לנכס נוסף
