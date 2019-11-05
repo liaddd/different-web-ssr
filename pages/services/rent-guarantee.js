@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "./../head";
+import Head from "../head";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentGuarantee = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="הבטחת שכר דירה">
+      <Head title="DiffeRent" ogTitle="הבטחת שכר דירה" canonical="rent-guarantee">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="הבטחת שכר דירה" />

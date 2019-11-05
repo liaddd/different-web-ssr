@@ -8,8 +8,8 @@ import "./../styles/main.scss";
 const TenantEviction = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="פינוי שוכר"> 
-        <div lang="he" dir="rtl" className="app services" title={"פינוי שוכר"}>
+      <Head title="DiffeRent" ogTitle="פינוי שוכר" canonical="tenant-eviction"> 
+        <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="פינוי שוכר" />
           <div className="section section-page-content">

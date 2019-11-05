@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentPayment = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="תשלום שכר דירה בכרטיס אשראי">
+      <Head title="DiffeRent" ogTitle="תשלום שכר דירה בכרטיס אשראי" canonical="rent-payment">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="תשלום שכר דירה בכרטיס אשראי" />

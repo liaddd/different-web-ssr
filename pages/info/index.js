@@ -9,7 +9,7 @@ import "./../styles/main.scss";
 const InfoPage = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="">
+      <Head title="DiffeRent" ogTitle="תודה" canonical="info">
         <div lang="he" dir="rtl" className="app info">
           <Header />
           <Info />

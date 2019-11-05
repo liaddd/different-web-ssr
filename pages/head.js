@@ -8,19 +8,20 @@ let defaultDescription =
 let defaultTitle = "DiffeRent - מבטיחים לך את שכר הדירה";
 let ogTitle = ""
 let internalPages = "משכירים דירות בראש שקט"
+let canonical = "https://www.diffe-rent.co.il/"
 
 const Head = props => {
 
   console.log(props)
   ogTitle = props.ogTitle != null ? `DiffeRent | ${props.ogTitle} - ${internalPages}` : defaultTitle;
   defaultDescription = props.defaultDescription ? props.defaultDescription : defaultDescription;
-
+  canonical = `https://www.diffe-rent.co.il/${props.canonical || ''}`
   return(
   <>
     <NextHead>
       <meta charset="utf-8" />
       <link rel="shortcut icon" href="/img/home-banner-small.png" />
-      <link rel="canonical" href="https://www.diffe-rent.co.il/" />
+      <link rel="canonical" href={canonical} />
       <meta property="og:url" content="https://www.diffe-rent.co.il" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={ogTitle} />

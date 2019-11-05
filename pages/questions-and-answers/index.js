@@ -9,7 +9,7 @@ import "./../styles/main.scss";
 const QuestionsAndAnswersPage = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="שאלות ותשובות">
+      <Head title="DiffeRent" ogTitle="שאלות ותשובות" canonical="questions-and-answers">
         <div lang="he" dir="rtl" className="app questions-and-answers">
           <Header />
           <QuestionsAndAnswers />

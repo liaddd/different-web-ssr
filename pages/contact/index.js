@@ -10,7 +10,7 @@ import "./../styles/main.scss";
 const ContactPage = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="יצירת קשר">
+      <Head title="DiffeRent" ogTitle="יצירת קשר" canonical="contact">
         <div lang="he" dir="rtl" className="app contact">
           <Header />
           <Contact />

@@ -23,7 +23,7 @@ class Step2 extends Component {
   render() {
     return (
       <>
-        <Head title="DiffeRent" ogTitle="הצטרפות לשירות">
+        <Head title="DiffeRent" ogTitle="הצטרפות לשירות" canonical="personal-info/step2">
           <div lang="he" dir="rtl" className="app personal-info">
             <Header />
             <ReactResizeDetector

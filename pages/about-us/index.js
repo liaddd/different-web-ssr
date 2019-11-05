@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const AboutUsPage = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="אודותינו">
+      <Head title="DiffeRent" ogTitle="אודותינו" canonical="about-us">
         <div lang="he" dir="rtl" className="app about-us">
           <Header />
           <AboutUs />
