@@ -9,7 +9,7 @@ import "./../styles/main.scss";
 const QuestionsAndAnswersPage = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="שאלות ותשובות" canonical="questions-and-answers">
+      <Head title="DiffeRent" ogTitle="שאלות ותשובות" canonical="questions-and-answers" description="איזה שקט נותנים לכם ב DiffeRent? הנה התשובות לכל השאלות שלכם שיסירו כל דאגה מליבכם בנושאי תשלום שכר דירה ופתרונות לדיירים סרבנים">
         <div lang="he" dir="rtl" className="app questions-and-answers">
           <Header />
           <QuestionsAndAnswers />

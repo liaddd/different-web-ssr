@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentCheck = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="בדיקת רקע של שוכרים" canonical="rent-check">
+      <Head title="DiffeRent" ogTitle="בדיקת רקע של שוכרים" canonical="rent-check" description="בדיקת רקע על שוכרים מבית DiffeRent - השירות של DiffeRent ידאג לבדוק עבורכם מול מי אתם חותמים את חוזה השכירות כך שתוכלו להסיר דאגה מליבכם">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="בדיקת רקע של שוכרים" />

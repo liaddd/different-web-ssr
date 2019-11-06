@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const AboutUsPage = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="אודותינו" canonical="about-us">
+      <Head title="DiffeRent" ogTitle="אודותינו" canonical="about-us" description="חברת DiffeRent מבטיחה לכם שקט נפשי בכל הקשור להשכרת דירות על ידי פלטפורמה דיגיטלית חדשה - בואו להכיר אותנו וליהנות משירות מקצועי ואמין">
         <div lang="he" dir="rtl" className="app about-us">
           <Header />
           <AboutUs />

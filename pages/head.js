@@ -4,7 +4,7 @@ import { string } from "prop-types";
 
 
 let defaultDescription =
-  "היא פלטפורמה דיגיטלית המבטיחה לכם בטחון ושקט נפשי בכל הנוגע לשכר הדירה שלכם. בעבור רק 2.5% מדמי השכירות החודשיים, מקבל בעל הדירה את הבטחת דמי השכירות עד תום החוזה, פינוי דייר סרבן ומציאת דייר חלופי במקרה הצורך DiffeRent";
+  "הכירו את דיפרנט - DiffeRent - פלטפורמה דיגיטלית המבטיחה לכם תשלום של שכר הדירה ומטפלת בפתרונות לדיירים סרבנים ומציאת דיירים חלופיים לדירה";
 let defaultTitle = "DiffeRent - מבטיחים לך את שכר הדירה";
 let ogTitle = ""
 let internalPages = "משכירים דירות בראש שקט"
@@ -13,7 +13,7 @@ let canonical = "https://www.diffe-rent.co.il/"
 const Head = props => {
 
   ogTitle = props.ogTitle != null ? `DiffeRent | ${props.ogTitle} - ${internalPages}` : defaultTitle;
-  defaultDescription = props.defaultDescription ? props.defaultDescription : defaultDescription;
+  defaultDescription = props.defaultDescription != null ? props.defaultDescription : defaultDescription;
   canonical = `https://www.diffe-rent.co.il/${props.canonical || ''}`
   return(
   <>
@@ -24,7 +24,7 @@ const Head = props => {
       <meta property="og:url" content="https://www.diffe-rent.co.il" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={defaultDescription} />
+      <meta property="og:description" content={props.description || defaultDescription} />
       <meta
         property="og:image"
         itemprop="image"
