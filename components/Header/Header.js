@@ -184,10 +184,21 @@ class Header extends Component {
                       יצירת קשר
                     </a>
                   </Link>
-
-                  <a href="https://blog.diffe-rent.co.il" className="menu-link">
+                      
+                  <Link href="/blog">
+                  <a
+                      className={
+                        activeLink === "/contact"
+                          ? "menu-link active"
+                          : "menu-link"
+                      }
+                    >
+                      הבלוג שלנו
+                    </a>
+                  </Link>
+                  {/* <a href="https://blog.diffe-rent.co.il" className="menu-link">
                     הבלוג שלנו
-                  </a>
+                  </a> */}
 
                   {/* activeLink !== "/personal-info" && (
                     <Link

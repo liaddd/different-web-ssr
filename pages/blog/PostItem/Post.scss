@@ -1,0 +1,173 @@
+/*   My Profile Page */
+@import "../../styles/main.scss";
+
+.myprofile-page {
+  padding: $length70px $length16px;
+  min-height: calc(100vh - 66px);
+  @include media(media-large-min) {
+    min-height: calc(100vh - 113px);
+  }
+}
+.myprofile-header-title {
+  font-size: $font24;
+  font-weight: bold;
+  @include media(media-small-min) {
+    font-size: $font32;
+  }
+}
+.myprofile-sum {
+  font-size: $font24;
+  padding-right: $length24px;
+  margin-right: $length16px;
+  position: relative;
+  @include media(media-small-min) {
+    font-size: $font32;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid $text-color;
+    right: 0;
+    top: 50%;
+    height: 28px;
+    transform: translateY(-50%);
+  }
+}
+.myprofile-block {
+  padding-top: $length35px;
+  @include media(media-small-min) {
+    padding-top: 4.25532vw; //62px
+  }
+}
+.myprofile-block-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  @include media(media-small-min) {
+    margin-bottom: 2rem;
+  }
+}
+.myprofile-title {
+  font-size: $font24;
+  font-weight: normal;
+  @include media(media-small-min) {
+    font-size: $font34;
+  }
+}
+.myprofile-block-form {
+  background-color: $white;
+  box-shadow: $price-block-shadow;
+  margin: 0 auto;
+  padding: $length25px $length16px $length25px;
+  min-height: inherit;
+  max-width: 300px;
+  border-radius: 70px 5px;
+  @include media(media-xx-small-min) {
+    max-width: 330px;
+  }
+  @include media(media-small-min) {
+    padding-top: 4.66712vw; //68px
+    padding-bottom: $length44px;
+    min-height: 522px;
+    max-width: 625px;
+    border-radius: 100px 0 100px 0;
+  }
+}
+
+.order-block {
+  border-radius: 14px;
+  box-shadow: $order-block-shadow;
+  padding: 2rem 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+  &:hover {
+    box-shadow: $wedo-block-shadow-hover;
+    cursor: pointer;
+  }
+  @include media(media-xx-small-min) {
+    padding: $length30px 5.83391vw $length32px; //85px
+    margin-bottom: $length24px;
+  }
+}
+.order-block-content {
+  display: inline-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-flow: column wrap;
+  width: calc(100% - 80px);
+  flex: 0 0 100%;
+  align-content: stretch;
+  @include media(media-small-min) {
+    width: calc(100% - 8.2361vw); //120px
+  }
+}
+.order-inner-content {
+  display: inline-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  flex: 1 1 100%;
+  align-content: stretch;
+}
+.order-content {
+  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  padding-left: 1rem;
+  @include media(media-xx-small-min) {
+    width: 50%;
+  }
+  @include media(media-small-min) {
+    width: 64%;
+    height: 97px;
+  }
+}
+.order-content:first-of-type {
+  width: 100%;
+  @include media(media-xx-small-min) {
+    width: 50%;
+  }
+  @include media(media-small-min) {
+    width: 36%;
+  }
+}
+.order-title {
+  font-size: $font24;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 6px;
+  @include media(media-small-min) {
+    font-size: $font21;
+  }
+}
+.order-text {
+  font-size: $font16;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 130%;
+  @include media(media-small-min) {
+    font-size: $font18;
+  }
+}
+.order-text-color {
+  color: $red;
+}
+.order-link {
+  font-size: $font16;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  @include media(media-xx-small-min) {
+    left: 5.83391vw;
+  }
+  @include media(media-small-min) {
+    left: $length120px;
+  }
+}
+
+/*   End My Profile Page */
