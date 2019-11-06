@@ -9,8 +9,7 @@ const butter = Butter('8a5fd9fe559d9c892ade6dfef4614676deb5d08c');
 class Blog extends Component {
 
   state = {
-    posts : null,
-    postClicked : false
+    posts : null
   }
     
   componentDidMount(){
@@ -18,7 +17,6 @@ class Blog extends Component {
       this.setState({posts : response.data.data})
     })
   }
-  
 
   render(){
     return (
