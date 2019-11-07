@@ -7,18 +7,18 @@ const PostItem = (props) => {
 
     return (
       <Fragment>
-        <Link href={`/blog/post?title=${props.postData.title}`}>
+        <Link href={`/blog/post?title=${props.postData.title}/${props.postData.slug}`}>
 
          <div className="order-block"
           style={{backgroundImage : `url(${props.postData.featured_image})`,
           backgroundRepeat : 'no-repeat',
-          backgroundSize: '120%'}}>
+          backgroundSize: 'cover'}}>
         <div className="order-block-content">
           <div className="order-inner-content">
             <div className="order-content">
-              <h3 className="order-title">{props.postData.title}</h3>
-              <p className="order-text">
-                {/* props.fName} {props.lName */}
+              <h1 className="order-title">{props.postData.title}</h1>
+              <p>
+                {/* props.postData.summary */}
               </p>
             </div>
           </div>

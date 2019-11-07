@@ -13,9 +13,8 @@ const butter = Butter('8a5fd9fe559d9c892ade6dfef4614676deb5d08c')
 class PostDetails extends Component{  
   static async getInitialProps({query}) {
     //console.log(query)
-    query = encodeURI(query.title)
-    const resp = await butter.post.retrieve("dyrvg-shry");  // TODO get query.slug dynamically
-    //console.log(resp)
+    query = /* encodeURI(query.title) */ query.title.split('/')[1]
+    const resp = await butter.post.retrieve(`${query}`);  // TODO get query.slug dynamically
     return resp.data;
   }
   render(){

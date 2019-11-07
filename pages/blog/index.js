@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "../head";
-import Test from "./Blog";
+import Blog from "./Blog";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./../styles/main.scss";
@@ -11,7 +11,7 @@ const BlogIndex = () => {
       <Head title="DiffeRent" ogTitle="בלוג" canonical="blog">
         <div lang="he" dir="rtl" className="app about-us">
           <Header />
-          <Test />
+          <Blog />
           <Footer />
         </div>
       </Head>
@@ -19,7 +19,7 @@ const BlogIndex = () => {
   );
 };
 
-// Test.getInitialProps = ctx => {
+// Blog.getInitialProps = ctx => {
 //   initialize(ctx);
 // };
 export default BlogIndex;
