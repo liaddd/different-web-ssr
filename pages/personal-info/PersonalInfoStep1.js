@@ -9,7 +9,7 @@ import validator from "./../../utils/validate/index";
 import requestClient from "./../../utils/requestClient/requests";
 import UserActions from "../../actions/users/users.actions";
 import { logout } from "../../actions/common/common.actions";
-
+import { getCookie } from "../../utils/cookie";
 const DEFAULT_ERROR = "value isn't valid ";
 
 class PersonalInfoStep1 extends Component {
@@ -127,6 +127,10 @@ class PersonalInfoStep1 extends Component {
   };
 
   componentDidMount() {
+    const global_token = getCookie("global_token");
+    if (!global_token) {
+      Router.push("/");
+    }
     this.nameInput.focus();
   }
   handleChangeState = (e, value, type) => {

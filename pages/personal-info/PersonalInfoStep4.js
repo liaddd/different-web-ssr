@@ -6,7 +6,7 @@ import Router from "next/router";
 import DatePicker, { registerLocale } from "react-datepicker";
 import he from "date-fns/locale/he";
 import "./ReactDatePicker.scss";
-
+import { getCookie } from "../../utils/cookie";
 import { stepper } from "../../actions/forms/forms.actions";
 import { STEPPER_STEP4 } from "../../actions/forms/forms.actions.constants";
 import validator from "../../utils/validate";
@@ -43,6 +43,10 @@ class PersonalInfoStep4 extends Component {
   };
 
   componentDidMount() {
+    const global_token = getCookie("global_token");
+    if (!global_token) {
+      Router.push("/");
+    }
     this.props.height &&
       scroll.scrollTo(this.props.height - this.props.height / 2);
   }

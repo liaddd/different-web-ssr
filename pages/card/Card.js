@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import Link from "next/link";
 import ReactResizeDetector from "react-resize-detector";
+import Router from "next/router";
+import { getCookie } from "../../utils/cookie";
 
 import SummaryBlock from "./../../components/SummaryBlock/SummaryBlock";
 import CardBlock from "./CardBlock";
@@ -14,6 +16,13 @@ class Card extends Component {
     width: 0,
     height: 0
   };
+
+  componentDidMount() {
+    const global_token = getCookie("global_token");
+    if (!global_token) {
+      Router.push("/");
+    }
+  }
 
   // onResize
   onResize = (width, height) => {

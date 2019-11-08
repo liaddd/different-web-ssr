@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import cn from "classnames";
 import { connect } from "react-redux";
 import Router from "next/router";
-
+import { getCookie } from "../../utils/cookie";
 import { stepper } from "../../actions/forms/forms.actions";
 import UserActions from "../../actions/users/users.actions";
 import { animateScroll as scroll } from "react-scroll";
@@ -35,6 +35,10 @@ class PersonalInfoStep2 extends Component {
     }
   };
   componentDidMount() {
+    const global_token = getCookie("global_token");
+    if (!global_token) {
+      Router.push("/");
+    }
     this.nameInput.focus();
     this.props.height && scroll.scrollTo(this.props.height / 4);
   }
