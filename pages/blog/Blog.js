@@ -18,7 +18,6 @@ class Blog extends Component {
   }
 
   render() {
-    console.log("object", this.state.posts);
     return (
       <Fragment>
         <PageHeader PageHeaderTitle={"הבלוג שלנו"} />
