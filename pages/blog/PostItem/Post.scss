@@ -1,6 +1,9 @@
 /*   My Profile Page */
 @import "../../styles/main.scss";
 
+.wrapper {
+  margin: 20px;
+}
 .myprofile-page {
   padding: $length70px $length16px;
   min-height: calc(100vh - 66px);
@@ -79,7 +82,9 @@
   padding: 2rem 1rem;
   position: relative;
   margin-bottom: 1rem;
+  filter: opacity(0.9);
   &:hover {
+    filter: opacity(1);
     box-shadow: $wedo-block-shadow-hover;
     cursor: pointer;
   }

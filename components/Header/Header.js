@@ -184,11 +184,11 @@ class Header extends Component {
                       יצירת קשר
                     </a>
                   </Link>
-                      
+
                   <Link href="/blog">
-                  <a
+                    <a
                       className={
-                        activeLink === "/contact"
+                        activeLink === "/blog"
                           ? "menu-link active"
                           : "menu-link"
                       }
