@@ -6,6 +6,7 @@ import CurrentTenantBlock from "./CurrentTenantBlock";
 import { stepper } from "../../actions/forms/forms.actions";
 import { STEPPER_STEP3 } from "../../actions/forms/forms.actions.constants";
 import { animateScroll as scroll } from "react-scroll";
+import { getCookie } from "../../utils/cookie";
 
 class PersonalInfoStep3 extends Component {
   state = {
@@ -16,6 +17,10 @@ class PersonalInfoStep3 extends Component {
     this.setState({ activeRadioButton });
   };
   componentDidMount() {
+    const global_token = getCookie("global_token");
+    if (!global_token) {
+      Router.push("/");
+    }
     this.props.height &&
       scroll.scrollTo(this.props.height - this.props.height / 2);
   }

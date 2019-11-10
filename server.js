@@ -11,6 +11,9 @@ app.prepare().then(() => {
   server.get("/robots.txt", (req, res) => {
     return res.sendFile(path.join(__dirname, "/robots.txt"));
   });
+  server.get("/blog/post/:title", (req, res) => {
+    return app.render(req, res, "/blog/post", { title: req.params.title });
+  });
   server.all("*", (req, res) => {
     return handle(req, res);
   });
