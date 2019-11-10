@@ -3,7 +3,7 @@ import { RESET_STORE } from "./../actions/common/common.actions.constants";
 
 const initialState = {
   stepper: {
-    activeStep: 4,
+    activeStep: 1,
     step1: {
       edit: false
     },
