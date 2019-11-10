@@ -22,7 +22,7 @@ class Blog extends Component {
       <Fragment>
         <PageHeader PageHeaderTitle={"הבלוג שלנו"} />
         <div className="section section-page-content">
-          <div className="container blog-wrapper">
+          <div className="blog-container">
             {this.state.posts &&
               this.state.posts.map((postData, index) => (
                 <PostItem key={index + 1} postData={postData}></PostItem>
