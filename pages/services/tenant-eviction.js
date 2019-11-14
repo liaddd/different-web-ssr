@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const TenantEviction = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="פינוי שוכר" canonical="tenant-eviction" description="פינוי דייר זוהי סוגייה שמטרידה משכירי דירה רבים ופה נכנסת לענייניים DiffeRent, בעזרת השירות של DiffeRent אתם כבעלי דירה תוכלו להיות רגועים לטווח ארוך"> 
+      <Head title="DiffeRent" ogTitle="פינוי שוכר" canonical="services/tenant-eviction" description="פינוי דייר זוהי סוגייה שמטרידה משכירי דירה רבים ופה נכנסת לענייניים DiffeRent, בעזרת השירות של DiffeRent אתם כבעלי דירה תוכלו להיות רגועים לטווח ארוך"> 
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="פינוי שוכר" />

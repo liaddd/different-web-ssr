@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentPayment = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="תשלום שכר דירה בכרטיס אשראי" canonical="rent-payment" description="תשלום שכר דירה באמצעות כרטיס אשראי יחסוך מכם המון כאב ראש, בואו להכיר את האפשרויות אצלנו ב-DiffeRent, עם DiffeRent התשלום יגיע בזמן וללא כל בעיות">
+      <Head title="DiffeRent" ogTitle="תשלום שכר דירה בכרטיס אשראי" canonical="services/rent-payment" description="תשלום שכר דירה באמצעות כרטיס אשראי יחסוך מכם המון כאב ראש, בואו להכיר את האפשרויות אצלנו ב-DiffeRent, עם DiffeRent התשלום יגיע בזמן וללא כל בעיות">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="תשלום שכר דירה בכרטיס אשראי" />
