@@ -16,10 +16,10 @@ const DEFAULT_ERROR = "value isn't valid ";
 
 class PersonalInfoStep2 extends Component {
   state = {
-    city: "",
-    street: "",
-    street_no: "",
-    apt_no: "",
+    city: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.city : null,
+    street: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.street : null,
+    street_no: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.street_number : null,
+    apt_no: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.apartment_number : null,
 
     cityValidate: {
       error: void 0
@@ -88,13 +88,13 @@ class PersonalInfoStep2 extends Component {
       this.state.apt_no,
       DEFAULT_ERROR
     );
-    if (apt_no && apt_no.error) {
+    /* if (apt_no && apt_no.error) {
       this.setState({ apt_noValidate: { error: apt_no.error } });
     } else {
       this.setState({ apt_noValidate: { error: void 0 } });
-    }
+    } */
 
-    if (city.valid && street.valid && street_no.valid && apt_no.valid) {
+    if (city.valid && street.valid && street_no.valid /* && apt_no.valid */) {
       this.props.onSetUserData({ showModal: true });
 
       requestClient
@@ -206,6 +206,7 @@ class PersonalInfoStep2 extends Component {
                     onChange={e =>
                       this.handleChangeState(e, e.target.value, "street")
                     }
+                    value={this.state.street ? this.state.street : ""}
                   />
                   <span className="input-label-span">*רחוב</span>
                   <span className="input-border"></span>
@@ -237,6 +238,7 @@ class PersonalInfoStep2 extends Component {
                     onChange={e =>
                       this.handleChangeState(e, e.target.value, "street_no")
                     }
+                    value={this.state.street_no ? this.state.street_no : ""}
                   />
                   <span className="input-label-span">*מספר בית</span>
                   <span className="input-border"></span>
@@ -268,6 +270,7 @@ class PersonalInfoStep2 extends Component {
                     onChange={e =>
                       this.handleChangeState(e, e.target.value, "apt_no")
                     }
+                    value={this.state.apt_no ? this.state.apt_no : ""}
                   />
                   <span className="input-label-span">מספר דירה</span>
                   <span className="input-border"></span>
