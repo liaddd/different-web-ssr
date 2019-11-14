@@ -19,7 +19,7 @@ import {
   AUTH_TOKEN
 } from "./routes.constants";
 const REACT_APP_BASE_HOST = "https://api.ballabaapis.com/";
-const REACT_APP_BASE_STAGE = "Dev";
+const REACT_APP_BASE_STAGE = "v1";
 // Api is axios wrapper class
 export default class Api {
   // login is first step for authorization
