@@ -8,7 +8,7 @@ import "./../styles/main.scss";
 const RentGuarantee = () => {
   return (
     <>
-      <Head title="DiffeRent" ogTitle="הבטחת שכר דירה" canonical="rent-guarantee" description="אתם כבעלי דירה רוצים להיות רגועים ששכר הדירה שלכם ישולם ובזמן, השירות של DiffeRent דואג בדיוק לזה, הצטרפו אלינו ל-DiffeRent להבטחת שכר הדירה">
+      <Head title="DiffeRent" ogTitle="הבטחת שכר דירה" canonical="services/rent-guarantee" description="אתם כבעלי דירה רוצים להיות רגועים ששכר הדירה שלכם ישולם ובזמן, השירות של DiffeRent דואג בדיוק לזה, הצטרפו אלינו ל-DiffeRent להבטחת שכר הדירה">
         <div lang="he" dir="rtl" className="app services">
           <Header />
           <PageHeader PageHeaderTitle="הבטחת שכר דירה" />

@@ -14,10 +14,10 @@ const DEFAULT_ERROR = "value isn't valid ";
 
 class PersonalInfoStep1 extends Component {
   state = {
-    first_name: null,
-    last_name: null,
-    id_number: null,
-    phone: null,
+    first_name: get(this.props , "user.first_name") ? this.props.user.first_name : null,
+    last_name: get(this.props , "user.last_name") ? this.props.user.last_name : null,
+    id_number: get(this.props , "user.id_number") ? this.props.user.id_number : null,
+    phone: get(this.props , "user.phone") ? this.props.user.phone : null,
 
     first_nameValidate: {
       error: void 0
