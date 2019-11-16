@@ -2,9 +2,10 @@
   "name": "custom-server-express",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node api/server.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "heroku-postbuild": "npm run build",
+    "start": "cross-env NODE_ENV=production node api/server.js"
   },
   "dependencies": {
     "@aws-amplify/cli": "^0.1.33",

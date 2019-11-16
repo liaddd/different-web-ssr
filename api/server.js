@@ -8,9 +8,9 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express();
-  server.get("/robots.txt", (req, res) => {
-    return res.sendFile(path.join(__dirname, "/robots.txt"));
-  });
+  // server.get("/robots.txt", (req, res) => {
+  //   return res.sendFile(path.join(__dirname, "/../robots.txt"));
+  // });
   server.get("/blog/post/:title", (req, res) => {
     return app.render(req, res, "/blog/post", { title: req.params.title });
   });
