@@ -7,7 +7,7 @@ Disallow: /signin`;
 export default class Sitemap extends React.Component {
   static getInitialProps({ res }) {
     res.setHeader("Content-Type", "text/plain");
-    res.write(sitemapXml);
+    res.write(robots);
     res.end();
   }
 }
