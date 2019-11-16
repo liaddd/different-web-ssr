@@ -189,6 +189,13 @@
     }
   }
 }
+.authorization-title{
+  font-size: $font24;
+  font-weight: bold;
+  @include media(media-small-min) {
+    font-size: $font34;
+  }
+}
 .authorization-block-title {
   font-size: $font24;
   font-weight: bold;

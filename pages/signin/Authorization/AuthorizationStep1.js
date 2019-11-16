@@ -192,7 +192,7 @@ class AuthorizationStep1 extends Component {
         <div className="authorization-block">
           <div className="authorization-block-form">
             <div className="authorization-block-title">
-              <div className="authorization-title">מספר טלפון להתחברות</div>
+              <h1 className="authorization-title">מספר טלפון להתחברות</h1>
             </div>
             <form
               className="authorization-form"
