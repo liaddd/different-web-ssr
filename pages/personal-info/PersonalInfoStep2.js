@@ -16,10 +16,10 @@ const DEFAULT_ERROR = "value isn't valid ";
 
 class PersonalInfoStep2 extends Component {
   state = {
-    city: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.city : null,
-    street: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.street : null,
-    street_no: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.street_number : null,
-    apt_no: get(this.props , "user.properties") ? this.props.user.properties[this.props.user.properties.length - 1].property.apartment_number : null,
+    city: get(this.props , "user.properties") && this.props.user.properties.length > 0 ? this.props.user.properties[this.props.user.properties.length - 1].property.city : null,
+    street: get(this.props , "user.properties") && this.props.user.properties.length > 0 ? this.props.user.properties[this.props.user.properties.length - 1].property.street : null,
+    street_no: get(this.props , "user.properties") && this.props.user.properties.length > 0 ? this.props.user.properties[this.props.user.properties.length - 1].property.street_number : null,
+    apt_no: get(this.props , "user.properties") && this.props.user.properties.length > 0 ? this.props.user.properties[this.props.user.properties.length - 1].property.apartment_number : null,
 
     cityValidate: {
       error: void 0
