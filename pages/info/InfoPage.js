@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import { connect } from "react-redux";
+import get from "lodash/get";
 import "./Info.scss";
 
 const Info = props => {
@@ -48,7 +49,7 @@ const Info = props => {
               שעות פעילות: ימים א'-ה' בין השעות 9:00-18:00.
             </p>
             <div className="btn-block">
-              <Link href={"/personal-info/step1"}>
+              <Link href={`/personal-info/step${props.step}`}>
                 <div className="text-w">
                   <button className="btn btn-blue btn-small ">
                     + הוסף בטחון לשכירות לנכס נוסף
@@ -70,7 +71,8 @@ const Info = props => {
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    user: state.user,
+    step: get(state.forms, "stepper.activeStep", 1)
   };
 };
 
@@ -78,7 +80,4 @@ const mapDispatchToProps = dispatch => {
   return {};
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Info);
+export default connect(mapStateToProps, mapDispatchToProps)(Info);

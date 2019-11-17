@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import { connect } from "react-redux";
+import get from "lodash/get";
 import "./PageHeaderHome.scss";
 
-const PageHeaderHome = ({ auth, onShowVideo }) => {
+const PageHeaderHome = ({ auth, onShowVideo, step }) => {
   return (
     <Fragment>
       <div className="section page-header-home-section page-header-home-img">
@@ -21,7 +22,7 @@ const PageHeaderHome = ({ auth, onShowVideo }) => {
               <div className="page-header-home-subtitle">טיפול בדייר סרבן</div>
             </div>
             <div className="btn-flex-btn">
-              <Link href={auth ? "/personal-info/step1" : "/signin"}>
+              <Link href={auth ? `/personal-info/step${step}` : "/signin"}>
                 <a className="btn btn-blue btn-medium menu-btn-link">
                   בואו נתחיל
                 </a>
@@ -62,10 +63,8 @@ const PageHeaderHome = ({ auth, onShowVideo }) => {
 };
 
 const mapStateToProps = state => ({
-  auth: state.user.auth
+  auth: state.user.auth,
+  step: get(state.forms, "stepper.activeStep", 1)
 });
 
-export default connect(
-  mapStateToProps,
-  {}
-)(PageHeaderHome);
+export default connect(mapStateToProps, {})(PageHeaderHome);
