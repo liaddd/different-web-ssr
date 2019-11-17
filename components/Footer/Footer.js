@@ -62,6 +62,9 @@ const Footer = () => {
                 <Link href="/questions-and-answers">
                   <a>שאלות ותשובות</a>
                 </Link>
+                <Link href="/blog">
+                  <a>הבלוג שלנו</a>
+                </Link>
               </nav>
               <nav className="links-block-row">
                 <span className="links-block-title">
