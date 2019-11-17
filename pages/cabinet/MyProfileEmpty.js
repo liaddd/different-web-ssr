@@ -11,7 +11,11 @@ const MyProfileEmpty = props => {
         <div className="myprofile-block-title">
           <h2 className="myprofile-title">אין כרגע עסקאות חדשות </h2>
           <div className="btn-block">
-            <Link href={props.userAuth ? "personal-info" : "signin"}>
+            <Link
+              href={
+                props.userAuth ? `/personal-info/step${props.step}` : "signin"
+              }
+            >
               <button className="btn btn-blue btn-small">
                 רוצה בטחון בשכירות
               </button>

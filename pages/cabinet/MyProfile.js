@@ -12,7 +12,7 @@ import { logout } from "../../actions/common/common.actions";
 
 class MyProfile extends Component {
   componentDidMount() {
-    const token = get(this.props, "user.auth.session_token");
+    const token = get(this.props, "userAuth.session_token");
     if (token) {
       API.getContracts(token)
         .then(res => {
@@ -29,8 +29,7 @@ class MyProfile extends Component {
   }
 
   render() {
-    const { contracts, userAuth, fName, lName } = this.props;
-
+    const { contracts, userAuth, fName, lName, step } = this.props;
     return (
       <Fragment>
         <div className="bg-image myprofile-page">
@@ -48,7 +47,7 @@ class MyProfile extends Component {
                 fName={fName}
               />
             ) : (
-              <MyProfileEmpty userAuth={userAuth} />
+              <MyProfileEmpty userAuth={userAuth} step={step} />
             )}
           </div>
         </div>
@@ -59,11 +58,11 @@ class MyProfile extends Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.user,
     contracts: state.user.contracts,
-    userAuth: state.user.userAuth,
+    userAuth: state.user.auth,
     fName: state.user.first_name,
-    lName: state.user.last_name
+    lName: state.user.last_name,
+    step: get(state.forms, "stepper.activeStep", 1)
   };
 };
 
@@ -78,7 +77,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MyProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(MyProfile);

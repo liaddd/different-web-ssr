@@ -13,8 +13,7 @@ const PostItem = props => {
       }}
     >
       <Link
-        href={`/blog/post/?title=${props.postData.slug}`}
-        as={`/blog/post/${props.postData.slug}`}
+        href={`/blog/post?title=${props.postData.title}/${props.postData.slug}`}
       >
         <div className="wrapper-item">
           <h2 className="order-title">{props.postData.title}</h2>

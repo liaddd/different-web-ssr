@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Link from "next/link";
 import cn from "classnames";
 import UserActions from "../../actions/users/users.actions";
+import get from "lodash/get";
 
 import "./PriceForm.scss";
 import { stepper } from "../../actions/forms/forms.actions";
@@ -25,6 +26,7 @@ class PriceForm extends Component {
   }
 
   render() {
+    const { step } = this.props;
     if (this.props.PriceFormTitle === void 0)
       throw new Error("PriceFormTitle is required");
     return (
@@ -80,11 +82,12 @@ class PriceForm extends Component {
               </p>
               <div className="btn-block">
                 <Link
-                  href={this.props.auth ? "/personal-info/step1" : "/signin"}
+                  href={
+                    this.props.auth ? `/personal-info/step${step}` : "/signin"
+                  }
                 >
                   <a
                     onClick={() => {
-                      this.props.onSetStepper({ activeStep: 1 });
                       this.props.onSetUserData({ showStepsAfterLogin: true });
                     }}
                     className="btn btn-blue btn-small"
@@ -101,7 +104,8 @@ class PriceForm extends Component {
   }
 }
 const mapStateToProps = state => ({
-  auth: state.user.auth
+  auth: state.user.auth,
+  step: get(state.forms, "stepper.activeStep", 1)
 });
 
 function mapDispatchToProps(dispatch) {
@@ -114,7 +118,4 @@ function mapDispatchToProps(dispatch) {
     }
   };
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PriceForm);
+export default connect(mapStateToProps, mapDispatchToProps)(PriceForm);
