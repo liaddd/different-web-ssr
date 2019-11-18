@@ -7,6 +7,7 @@
   cursor: pointer;
   width: 30%;
   border: 1px solid;
+  border: none;
   .wrapper-item {
     padding: 5px;
     background: #ffffff71;
@@ -23,6 +24,7 @@
       font-weight: bold;
     }
     .order-text {
+      color: #565350;
       font-size: $font24;
       font-weight: bold;
       margin-top: 0;

@@ -1,8 +1,10 @@
 import { Provider } from "react-redux";
 import App from "next/app";
-// import withRedux from "next-redux-wrapper";
 import withRedux from "../lib/with-redux";
-
+import TagManager from "react-gtm-module";
+const tagManagerArgs = {
+  id: "GTM-K9R7NGD"
+};
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     return {
@@ -12,6 +14,9 @@ class MyApp extends App {
           : {})
       }
     };
+  }
+  componentDidMount() {
+    TagManager.initialize(tagManagerArgs);
   }
 
   render() {
