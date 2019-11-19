@@ -211,21 +211,7 @@ class PersonalInfoStep4 extends Component {
                         : DEFAULT_DATE_FORMAT
                     }
                   />
-                  {/* <DatePicker
-                    dir="ltr"
-                    className="input-text input-text-grey input-date-picker"
-                    onChange={this.onChangeEnterDate}
-                    value={this.state.enterDate ? this.state.enterDate : ""}
-                    clearIcon={null}
-                    calendarIcon={null}
-                    format={
-                      this.state.enterDate
-                        ? NOT_EMPTY_DATE_FORMAT
-                        : DEFAULT_DATE_FORMAT
-                    }
-                    locale={"he-He"}
-                    minDate={new Date()}
-                  /> */}
+                  <br />
 
                   <span className="input-label-span-date">
                     תאריך כניסה לדירה
@@ -263,25 +249,7 @@ class PersonalInfoStep4 extends Component {
                         : DEFAULT_DATE_FORMAT
                     }
                   />
-                  {/* <DatePicker
-                    dir="ltr"
-                    className="input-text input-text-grey input-date-picker"
-                    onChange={this.onChangeLeaveDate}
-                    value={this.state.leaveDate ? this.state.leaveDate : null}
-                    clearIcon={null}
-                    calendarIcon={null}
-                    format={
-                      this.state.leaveDate
-                        ? NOT_EMPTY_DATE_FORMAT
-                        : DEFAULT_DATE_FORMAT
-                    }
-                    locale={"he-He"}
-                    placeholderText={false}
-                    minDate={
-                      this.state.enterDate ? this.state.enterDate : new Date()
-                    }
-                  /> */}
-
+                  <br />
                   <span className="input-label-span-date">
                     תאריך יציאה מהדירה
                   </span>
