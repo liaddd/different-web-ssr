@@ -73,7 +73,16 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   <lastmod>2019-11-16T19:31:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>https://www.diffe-rent.co.il/blog/post?title=%D7%A6%D7%9E%D7%A6%D7%95%D7%9D%20%D7%A0%D7%96%D7%A7%D7%99%D7%9D/tsmtsvm-nzqym</loc>
+  <lastmod>2019-11-19T14:31:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.diffe-rent.co.il/blog/post?title=%D7%A4%D7%99%D7%A0%D7%95%D7%99%20%D7%93%D7%99%D7%99%D7%A8/pynvy-dyyr</loc>
+  <lastmod>2019-11-19T14:31:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>`;
 
