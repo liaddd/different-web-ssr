@@ -25,7 +25,7 @@ class PostDetails extends Component {
       return <ErrorPage statusCode={err.statusCode} />;
     }
     return (
-      <Head title="DiffeRent" ogTitle="בלוג" canonical={`blog/post?title=${data.title}/${data.slug}`}>
+      <Head title="DiffeRent" ogTitle={`${data.title}`} canonical={`blog/post?title=${data.title}/${data.slug}`}>
         <Header />
         <PageHeader PageHeaderTitle={`${data.title}`} />
         <div>
