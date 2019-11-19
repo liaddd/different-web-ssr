@@ -3,7 +3,7 @@ import App from "next/app";
 import withRedux from "../lib/with-redux";
 import TagManager from "react-gtm-module";
 const tagManagerArgs = {
-  id: "GTM-K9R7NGD"
+  gtmId: "GTM-K9R7NGD"
 };
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
