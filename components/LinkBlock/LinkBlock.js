@@ -14,9 +14,9 @@ class LinkBlock extends Component {
               <div className="header-link">
                 <img src={linkIcon1} alt="" />
               </div>
-              <div className="header-link">
+              {/* <div className="header-link">
                 <img src={linkIcon2} alt="" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

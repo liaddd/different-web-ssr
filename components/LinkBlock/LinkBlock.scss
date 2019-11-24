@@ -36,9 +36,9 @@
       filter: grayscale(1);
       width: 119px;
       height: auto;
-      @include media(media-small-min) {
+      /* @include media(media-small-min) {
         margin-left: 2.74537vw; //40px
-      }
+      } */
     }
   }
   &:nth-of-type(2) {
