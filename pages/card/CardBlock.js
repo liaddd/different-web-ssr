@@ -122,7 +122,7 @@ class CardBlock extends Component {
 
                   const prepareData = {
                     "property_id": this.props.user.id,
-                    "tenant_id": get(this.props,'user.selected_tenant_user.exist_tenant_id',''),
+                    "tenant_id": get(this.props,'user.selected_tenant_user.id_number',''),
                     "is_agent": false,
                     "card": {
                       "user_id": this.props.user.id,

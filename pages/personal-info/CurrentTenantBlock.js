@@ -413,6 +413,12 @@ class CurrentTenantBlock extends Component {
           if(get(error,'response.data.errorCode')==="E164_NUMBER"){
             errorMessage = 'מספר טלפון לא תקין'
           }
+          if(get(error,'response.data.errorCode')==="UNAUTHORIZED_TENANT"){
+            errorMessage = 'שוכר זה נמצא בחוזה פעיל'
+          }
+          if(get(error,'response.data.errorCode')==="LIMIT_ERROR"){
+            errorMessage = 'הגעת לכמות הבדיקות המקסימלית להיום'
+          }
           // this.props.onSetUserData({showModal: false});
           this.setState({
             showModal: true,
