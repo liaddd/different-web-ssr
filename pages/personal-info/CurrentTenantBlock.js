@@ -362,7 +362,7 @@ class CurrentTenantBlock extends Component {
           phone = phone.replace(/^0/, "+972");
         }
         users.push({
-          property_id: tenants[i].property_id,
+          property_id: this.props.user.id,
           phone: phone,
           first_name: tenants[i].first_name,
           last_name: tenants[i].last_name,
