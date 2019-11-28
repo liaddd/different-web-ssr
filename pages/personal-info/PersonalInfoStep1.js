@@ -18,6 +18,7 @@ class PersonalInfoStep1 extends Component {
     last_name: get(this.props , "user.last_name") ? this.props.user.last_name : null,
     id_number: get(this.props , "user.id_number") ? this.props.user.id_number : null,
     phone: get(this.props , "user.phone") ? this.props.user.phone : null,
+    email: get(this.props , "user.email") ? this.props.user.email : null,
 
     first_nameValidate: {
       error: void 0
@@ -32,6 +33,10 @@ class PersonalInfoStep1 extends Component {
     },
 
     phoneValidate: {
+      error: void 0
+    },
+
+    emailValidate: {
       error: void 0
     }
   };
@@ -82,7 +87,15 @@ class PersonalInfoStep1 extends Component {
     } else {
       this.setState({ phoneValidate: { error: void 0 } });
     }
-
+    let email = this.state.email
+    if(email){
+      email = validator.validate.validate(validator.constants.EmailRegex, this.state.email, DEFAULT_ERROR);
+      if (email && email.error) {
+          this.setState({emailValidate: {error: email.error}})
+      } else {
+          this.setState({emailValidate: {error: void 0}})
+      }
+    }
     if (first_name.valid && last_name.valid && id_number.valid && phone.valid) {
       this.props.onSetUserData({ showModal: true });
 
@@ -93,10 +106,8 @@ class PersonalInfoStep1 extends Component {
             id_number: this.state.id_number,
             first_name: this.state.first_name,
             last_name: this.state.last_name,
-            birth_date:
-              "19/01/1980" /* ,
-                    "landlord_phone": this.props.user.phone,
-                    "email": "template@template.com" */
+            birth_date: "19/01/1980",
+            email: this.state.email
           },
           this.props.user.auth.session_token
         )
@@ -284,6 +295,40 @@ class PersonalInfoStep1 extends Component {
                   {this.state.phoneValidate.error !== void 0 && (
                     <span className="personal-info-input-error span-error">
                       *מספר טלפון
+                    </span>
+                  )}
+                </label>
+              </p>
+              <p className="input-block-row">
+                <label
+                  htmlFor="input-personal-info-phone-number"
+                  className={cn({
+                    "input-label": true,
+                    "input-not-empty":
+                      this.state.email && this.state.email.length > 0,
+                    "input-error": this.state.emailValidate.error !== void 0
+                  })}
+                >
+                  <input
+                    className="input-text input-text-grey"
+                    type="tel"
+                    dir="auto"
+                    style={{ textAlign: "end" }}
+                    id="input-personal-info-phone-number"
+                    ref={input => {
+                      this.nameInput = input;
+                    }}
+                    placeholder="&nbsp;"
+                    onChange={e =>
+                      this.handleChangeState(e, e.target.value, "email")
+                    }
+                    value={this.state.email ? this.state.email : ""}
+                  />
+                  <span className="input-label-span">*אימייל</span>
+                  <span className="input-border"></span>
+                  {this.state.phoneValidate.error !== void 0 && (
+                    <span className="personal-info-input-error span-error">
+                      *כתובת אימייל
                     </span>
                   )}
                 </label>
