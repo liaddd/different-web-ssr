@@ -114,6 +114,15 @@ class ContactForm extends Component {
                     value="DiffeRent , חיזרו אליי"
                   />
                 </div>
+                <div className="btn-block">
+                  <input
+                    style={{display : 'none'}}
+                    className="input-submit btn-blue btn-large"
+                    id="contact-submit"
+                    type="submit"
+                    value="{click_id}"
+                  />
+                </div>
               </form>
             </div>
           </div>
